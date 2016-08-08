@@ -1,0 +1,132 @@
+header {
+	width: 100%;
+	height: 800px;
+	border-bottom: 5px solid;
+	border-image: url("img/border.jpg") 90 5 repeat;
+
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		height: 500px;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		height: 420px;
+	}
+
+	//swiper start
+	.swiper-container {
+		width: 100%;
+		height: 100%;
+
+		.swiper-slide {
+			background-position: center;
+			background-size: cover;
+		}
+
+		@media (max-width: $screen-sm-max) {
+			.swiper-button-prev,
+			.swiper-button-next {
+				display: none;
+			}
+		}
+
+		.swiper-pagination-bullet-active {
+			background: $british_gold;
+		}
+
+		// slide inside
+
+		.swiper-slide {
+
+			&_info {
+				position: absolute;
+				height: 515px;
+				bottom: 0;
+				transform: translateX(-50%);
+				margin-left: 50%;
+
+				@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+					height: 400px;
+				}
+
+				@media (max-width: $screen-xs-max) {
+					height: 335px;
+				}
+			}
+
+			&_date {
+				&-wrapper {
+					text-align: right;
+					position: relative;
+				}
+				&-shape {
+					background: $british_gold;
+					color: $british_gold;
+					position: absolute;
+					transform: skew(-30deg);
+				}
+
+				&-shape,
+				&-text {
+					display: inline-block;
+					padding: 7px 20px;
+				}
+
+				&-text {
+					color: #313332;
+					position: relative;
+				}
+
+			}
+
+			&_title {
+				h2 {
+					color: #ffffff;
+					text-transform: uppercase;
+					font-size: 60px;
+					text-align: center;
+					padding-top: 7px;
+
+					.swiper-slide_title-extra {
+						display: block;
+						font-size: 44px;
+						color: $british_gold;
+						text-transform: none;
+						padding-top: 10px;
+					}
+
+					@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+						font-size: 50px;
+						.swiper-slide_title-extra {
+							font-size: 34px;
+						}
+					}
+
+					@media (max-width: $screen-xs-max) {
+						font-size: 30px;
+						padding-top: 42px;
+						.swiper-slide_title-extra {
+							font-size: 18px;
+							padding-top: 8px;
+						}
+					}
+
+				}
+			}
+
+			&_button {
+				&-wrapper {
+					text-align: center;
+					padding-top: 46px;
+
+					@media (max-width: $screen-xs-max) {
+						padding-top: 31px;
+					}
+				}
+			}
+		}
+
+		// slide inside end
+
+	}
+	// swiper end
+}

@@ -1,0 +1,42 @@
+.media-block {
+	height: 480px;
+
+	&_img {
+		height: 480px;
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+	}
+
+	$mediaBlockContentWidth: $screen-lg/2;
+	@media (max-width: $screen-xs-max) {
+		$mediaBlockContentWidth: 100%;
+	}
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		$mediaBlockContentWidth: $screen-sm/2;
+	}
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+		$mediaBlockContentWidth: $screen-md/2;
+	}
+
+	&_content {
+		width: $mediaBlockContentWidth;
+		box-sizing: border-box;
+		padding-top: 50px;
+
+		&-left {
+			.media-block_content {
+				padding-left: 60px;
+			}
+		}
+	}
+
+	&_title {
+		padding-bottom: 15px;
+	}
+	&_text {
+		height: 225px;
+		overflow: auto;
+	}
+
+}

@@ -1,0 +1,28 @@
+.btn-main {
+	background: rgba(0, 0, 0, .6);
+	color: $british_gold;
+	padding: 16px 35px;
+	border-color: $british_gold;
+	border-radius: 30px;
+	text-transform: uppercase;
+
+	&:hover {
+		color: darken($british_gold, 5%);
+	}
+
+
+	&_light {
+		background: transparent;
+		color: #333333;
+		font-weight: bold;
+
+		&:hover {
+			color: #000000;
+		}
+	}
+
+
+	@media (max-width: $screen-xs-max) {
+		padding: 12px 19px;
+	}
+}
