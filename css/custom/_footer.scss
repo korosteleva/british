@@ -3,16 +3,24 @@
 
 	&-nav {
 
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+
 		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 			padding-top: 30px;
 		}
 
 		@media (max-width: $screen-xs-max) {
 			text-align: center;
+			display: block;
 		}
 
 		li {
 			padding-bottom: 18px;
+			min-width: 185px;
+			flex-grow: 1;
+
 			&:last-child {
 				padding-bottom: 0;
 			}
@@ -22,6 +30,12 @@
 			color: $british_gold;
 			font-size: 12px;
 			text-transform: uppercase;
+			width: 150px;
+			display: inline-block;
+
+			@media (max-width: $screen-xs-max) {
+				width: auto;
+			}
 		}
 	}
 
