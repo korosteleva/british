@@ -1,6 +1,7 @@
 header {
 	width: 100%;
-	height: 800px;
+	height: 796px;
+	position: relative;
 
 	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 		height: 500px;
@@ -15,16 +16,9 @@ header {
 		width: 100%;
 		height: 100%;
 
-		.swiper-slide {
-			background-position: center;
-			background-size: cover;
-		}
-
-		@media (max-width: $screen-sm-max) {
-			.swiper-button-prev,
-			.swiper-button-next {
-				display: none;
-			}
+		.swiper-button-prev,
+		.swiper-button-next {
+			display: none;
 		}
 
 		.swiper-pagination-bullet-active {
@@ -34,10 +28,12 @@ header {
 		// slide inside
 
 		.swiper-slide {
+			background-position: center;
+			background-size: cover;
 
 			&_info {
 				position: absolute;
-				height: 515px;
+				height: 453px;
 				bottom: 0;
 				transform: translateX(-50%);
 				margin-left: 50%;
@@ -126,11 +122,16 @@ header {
 		// slide inside end
 
 	}
-	// swiper end
-}
 
-.border {
-	background: url('img/border.jpg') center top;
-	width: 100%;
-	height: 10px;
+	@media (min-width: $screen-md-min) {
+		.swiper-container {
+			&:hover {
+				.swiper-button-prev,
+				.swiper-button-next {
+					display: block;
+				}
+			}
+		}
+	}
+	// swiper end
 }

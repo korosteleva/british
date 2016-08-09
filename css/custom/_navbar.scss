@@ -1,0 +1,156 @@
+.navbar-british {
+	margin-bottom: 0;
+	background: transparent;
+	position: absolute;
+	z-index: 100;
+	transform: translateX(-50%);
+	margin-left: 50%;
+	top: 215px;
+
+	> .container {
+		border: 1px solid $british_gold;
+		border-left: none;
+		border-right: none;
+	}
+
+	.navbar-nav {
+		float: none;
+		width: 100%;
+
+		>li {
+			> a {
+				color: #ffffff;
+				text-transform: uppercase;
+				padding-top: 22px;
+				padding-bottom: 23px;
+
+				&:hover {
+					background: transparent;
+					color: $british_gold;
+				}
+
+
+				&:active,
+				&:focus {
+					background: transparent;
+					color: #ffffff;
+				}
+			}
+
+			&.active,
+			&.open {
+				> a {
+					background: transparent;
+					color: $british_gold;
+				}
+			}
+
+			&:active,
+			&:focus {
+				> a {
+					background: transparent;
+					color: #ffffff;
+				}
+
+			}
+		}
+	}
+
+	.navbar-british-drop {
+		display: inline;
+		float: none;
+		padding-top: 0;
+		padding-bottom: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-right: 0;
+
+		.icon-bar {
+			background: $british_gold;
+		}
+	}
+
+
+	@media (max-width: $screen-sm-max) {
+		top: 0;
+		width: 100%;
+		margin: 0;
+		transform: none;
+		background: rgba(0, 0, 0, .75);
+
+		> .container {
+			border: none;
+
+			.navbar-toggle {
+				margin: 0;
+				padding: 30px;
+				background: #000000;
+				border-radius: 0;
+
+				@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+					background: transparent;
+				}
+
+				.icon-bar {
+					width: 18px;
+					height: 3px;
+					background: $british_gold;
+				}
+			}
+		}
+
+		.navbar-header {
+			//display: flex;
+		}
+
+		.navbar-nav {
+			>li {
+				> a {
+					padding-top: 8px;
+					padding-bottom: 8px;
+				}
+			}
+		}
+
+	}
+
+	&-logo {
+		display: none;
+		@media (max-width: $screen-sm-max) {
+			display: inline-block;
+			width: 240px;
+			position: relative;
+			padding-left: 90px;
+			padding-top: 10px;
+
+			&:hover {
+				text-decoration: none;
+			}
+
+			img {
+				position: absolute;
+				left: 15px;
+				top: 10px;
+			}
+
+			span {
+				color: $british_gold;
+				text-transform: uppercase;
+				font-size: 12px;
+				line-height: 14px;
+			}
+		}
+
+		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+			width: 300px;
+			padding-top: 20px;
+		}
+	}
+
+	//@media (max-width: $screen-sm-max) {
+	//	.navbar-collapse.collapse {
+	//		background: #333333;
+	//	}
+	//}
+
+}
