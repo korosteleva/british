@@ -65,9 +65,9 @@
 					align-items: center;
 				}
 				&:hover {
-					background: $british_gold;
 					> a {
 						color: $british_gray_dark;
+						background: $british_gold;
 					}
 					.icon-bar {
 						background: $british_gray_dark;

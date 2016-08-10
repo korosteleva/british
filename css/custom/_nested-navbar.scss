@@ -1,0 +1,190 @@
+.navbar-british {
+
+	@media (min-width: $screen-md-min) {
+
+		.navbar-nav {
+			> li {
+				&.dropdown {
+					.dropdown-menu {
+
+						.dropdown-menu {
+							top: -2px;
+							position: absolute;
+							right: 0;
+							left: auto;
+							transform: translateX(100%);
+						}
+					}
+				}
+			}
+
+			li {
+				&.dropdown {
+					&:hover {
+						> .dropdown-menu {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+
+		.dropdown-menu {
+			padding: 0;
+			border: none;
+			border-radius: 0;
+
+			> li {
+				> a {
+					padding: 16px 40px;
+					&:hover {
+						background: $british_gold;
+					}
+					&:focus {
+						background: transparent;
+					}
+				}
+				&.dropdown {
+
+					> a {
+						background: url("img/dropdown-marker.png") transparent no-repeat 20px 50%;
+
+						&:hover {
+							background-color: $british_gold;
+						}
+					}
+
+				}
+			}
+		}
+	}
+
+
+	@media (max-width: $screen-sm-max) {
+		> .container {
+			width: 100%;
+		}
+
+
+		.navbar-nav {
+
+			>li {
+				border-bottom: 1px solid #484848;
+				> a {
+					color: $british_gold;
+					padding-top: 20px;
+					padding-bottom: 20px;
+					padding-left: 50px;
+					font-weight: 300;
+
+					&:hover {
+						background-color: transparent;
+						color: $british_gold;
+					}
+
+					&:active,
+					&:focus {
+						background-color: transparent;
+						color: $british_gold;
+					}
+				}
+
+				&.dropdown {
+					$closedDropdownBg: url("img/sm-dropdown-marker.png") transparent no-repeat 15px 50%;
+					> a {
+						background: $closedDropdownBg;
+					}
+					&:hover {
+						> a {
+							background: $closedDropdownBg;
+							color: $british_gold;
+						}
+					}
+				}
+
+				&.active,
+				&.open {
+					$openedDropdownBg: url("img/sm-dropdown-marker_open.png") transparent no-repeat 15px 50%;
+					> a {
+						background: $openedDropdownBg;
+						color: $british_gold;
+					}
+
+					&.dropdown {
+						> a {
+							color: $british_gold;
+						}
+						&:hover {
+							> a {
+								background: $openedDropdownBg;
+								color: $british_gold;
+							}
+						}
+
+
+						.dropdown-menu {
+							position: static;
+							float: none;
+							padding: 0;
+							margin: 0;
+							background: transparent;
+							border: none;
+							box-shadow: none;
+							display: block;
+
+							> li {
+								a {
+									color: #ffffff;
+									background: transparent;
+									padding: 7px 20px 7px 50px;
+								}
+
+								&:hover {
+									> a {
+										background: transparent;
+										color: $british_gold;
+									}
+								}
+							}
+							.dropdown-menu {
+								padding-left: 20px;
+							}
+
+						}
+					}
+				}
+			}
+		}
+
+
+
+
+
+		.navbar-nav {
+			li {
+				&.dropdown {
+					.dropdown-menu {
+						display: none;
+					}
+				}
+			}
+		}
+
+		.navbar-collapse {
+			padding: 0;
+			background: $british_gray_dark;
+			.navbar-nav {
+				float: none;
+				width: auto;
+				margin: 0;
+
+				> li {
+					color: $british_gold;
+				}
+			}
+		}
+
+	}
+
+
+}
