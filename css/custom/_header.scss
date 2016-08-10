@@ -18,8 +18,9 @@ header {
 
 		.swiper-button-prev,
 		.swiper-button-next {
-			display: none;
+			opacity: .5;
 		}
+
 
 		.swiper-pagination-bullet-active {
 			background: $british_gold;
@@ -108,6 +109,8 @@ header {
 			}
 
 			&_button {
+				background: rgba(0, 0, 0, .6);
+				padding: 16px 35px;
 				&-wrapper {
 					text-align: center;
 					padding-top: 46px;
@@ -125,10 +128,31 @@ header {
 
 	@media (min-width: $screen-md-min) {
 		.swiper-container {
-			&:hover {
-				.swiper-button-prev,
-				.swiper-button-next {
-					display: block;
+
+			.swiper-button-prev {
+				background-image: url(img/slider-arrow-left.png);
+				left: 30px;
+				right: auto;
+			}
+			.swiper-button-next {
+				background-image: url(img/slider-arrow-right.png);
+				right: 30px;
+				left: auto;
+			}
+
+			.swiper-button-prev,
+			.swiper-button-next {
+				width: 100px;
+				height: 100px;
+				display: block;
+				background-size: contain;
+				transition: opacity .3s;
+
+				bottom: 240px;
+				top: auto;
+
+				&:hover {
+					opacity: 1;
 				}
 			}
 		}

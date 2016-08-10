@@ -1,0 +1,142 @@
+.header-logos {
+	position: absolute;
+	z-index: 100;
+	transform: translateX(-50%);
+	margin-left: 50%;
+	top: 30px;
+
+	&-actions {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		.lang-block {
+			margin: 0 20px 0 40px;
+		}
+	}
+
+	&-main {
+
+		position: relative;
+		padding-left: 112px;
+		padding-top: 15px;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		img {
+			width: 90px;
+			height: auto;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		span {
+			color: $british_gold;
+			text-transform: uppercase;
+			font-size: 18px;
+			line-height: 22px;
+			width: 200px;
+			display: block;
+		}
+
+	}
+
+	&-list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 20px;
+	}
+
+	&-wrapped {
+		border: 1px solid $british_gold;
+		border-radius: 50px;
+		padding: 18px 15px 18px 112px;
+		position: relative;
+		text-align: left;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		img {
+			position: absolute;
+			left: 25px;
+			top: 13px;
+		}
+
+		span {
+			color: $british_gold;
+			font-size: 13px;
+			line-height: 16px;
+			text-transform: uppercase;
+		}
+
+		@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+			border: none;
+			padding: 15px 15px 15px 95px;
+
+			img {
+				left: 10px;
+				top: 7px;
+			}
+
+			span {
+				font-size: 12px;
+			}
+		}
+	}
+
+	&-kem {
+
+		img {
+			width: 64px;
+			top: 12px;
+		}
+	}
+
+
+	@media (min-width: $screen-lg-min) {
+
+		&-lyceum,
+		&-kem {
+			transition: background 0.3s;
+			&:hover {
+				background: rgba(0, 0, 0, .5);
+			}
+		}
+
+		&-lyceum {
+			width: 270px;
+		}
+
+		&-kem {
+			width: 355px;
+			padding-left: 104px;
+
+			img {
+				width: 64px;
+				top: 12px;
+			}
+		}
+	}
+
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+
+		&-lyceum {
+			width: 230px;
+		}
+
+		&-kem {
+			width: 320px;
+			padding-left: 85px;
+			padding-right: 0;
+		}
+	}
+
+
+
+}

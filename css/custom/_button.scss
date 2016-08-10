@@ -1,25 +1,30 @@
 .btn-main {
-	background: rgba(0, 0, 0, .6);
+	background: transparent;
 	color: $british_gold;
 	padding: 16px 35px;
 	border-color: $british_gold;
 	border-radius: 30px;
 	text-transform: uppercase;
+	transition: color 0.3s, background 0.3s;
 
 	&:hover {
-		color: darken($british_gold, 5%);
-	}
-
-
-	&_light {
-		background: transparent;
+		background: $british_gold;
 		color: #333333;
-		font-weight: bold;
-
-		&:hover {
-			color: #000000;
-		}
 	}
+
+	&.active {
+		background: $british_gold;
+		color: #333333;
+	}
+
+	//&_light {
+	//	background: transparent;
+	//	color: #333333;
+	//
+	//	&:hover {
+	//		color: #000000;
+	//	}
+	//}
 
 
 	@media (max-width: $screen-xs-max) {
