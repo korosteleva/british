@@ -6,14 +6,16 @@
 
 		//Default options
 		var s = $.extend({
-			dropdownSelector		 	: "li.dropdown",
-			dropdownMenuSelector		: "ul.dropdown-menu",
-			dropdownTabsSelector		: "li",
-			visibleTabsSelector			: ">li:not(.dropdown)",
-			developmentId				: "dt-devInfo",
-			autoArrangeTabs				: true,
-			development					: false
+			dropdownSelector: "li.dropdown",
+			dropdownMenuSelector: "ul.dropdown-menu",
+			dropdownTabsSelector: "li",
+			visibleTabsSelector: ">li:not(.dropdown)",
+			developmentId: "dt-devInfo",
+			autoArrangeTabs: true,
+			development: false
 		}, o);
+
+
 
 		return this.each( function(  ) {
 
@@ -21,10 +23,9 @@
 			var dropdown = $(s.dropdownSelector, this);
 			var dropdownMenu = $(s.dropdownMenuSelector, dropdown);
 
-			console.log(dropdown);
-			console.log(dropdownMenu);
-
 			var $dropdownTabs = function () {
+
+
 				return $(s.dropdownTabsSelector, dropdownMenu);
 			};
 
@@ -104,10 +105,9 @@
 				if (availableSpace()<0) {//we will hide tabs here
 					var x = availableSpace();
 					$($visibleTabs().get().reverse()).each(function( index ){
-						if (!($(this).hasClass('always-visible'))){
-							$(this).prependTo(dropdownMenu);
-							x=x+$(this).outerWidth();
-						}
+
+						$(this).prependTo(dropdownMenu);
+						x=x+$(this).outerWidth();
 						if (x>=0) {return false;}
 					});
 				}
@@ -129,12 +129,6 @@
 
 			if (s.autoArrangeTabs) {
 				var tempTabs = [];
-				$($visibleTabs().get().reverse()).each(function( index ){
-					if ($(this).hasClass('always-visible')) {
-						tempTabs.push($(this));
-						$(this).remove();
-					}
-				});
 				for (var i = 0; i < tempTabs.length; i++ ) {
 					$container.prepend(tempTabs[i]);
 				}

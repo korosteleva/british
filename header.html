@@ -52,6 +52,8 @@
 	</div>
 
 	<nav class="navbar navbar-british">
+		<span class="visible-xs visible-sm js-custom-navbar"></span>
+
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -59,6 +61,10 @@
 				<a href="" class="navbar-british-logo">
 					<img src="img/logo-transparent.png" />
 					<span>Британский лицей лингвистической школы</span>
+				</a>
+
+				<a href="" class="navbar-british-search">
+					<img src="img/search.png"/>
 				</a>
 
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-british-collapse" aria-expanded="false">
@@ -69,8 +75,11 @@
 				</button>
 			</div>
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="navbar-british-collapse">
+				<div class="lang-block visible-xs visible-sm text-right">
+					<a href="" class="btn btn-main active">RU</a>
+					<a href="" class="btn btn-main">ENG</a>
+				</div>
 				<ul class="nav navbar-nav droptabs">
 					<li class="active dropdown">
 						<a href="">О лицее</a>
@@ -150,21 +159,21 @@
 					<li><a href="">Стажировка за рубежом</a></li>
 					<li><a href="">Контакты</a></li>
 
-					<!--<li class="dropdown pull-right hidden-xs">-->
-						<!--<a href="#" id="navbarBritishDrop" class="dropdown-toggle" data-toggle="dropdown">-->
-							<!--<button class="navbar-british-drop navbar-toggle" type="button">-->
-								<!--<span class="icon-bar"></span>-->
-								<!--<span class="icon-bar"></span>-->
-								<!--<span class="icon-bar"></span>-->
-							<!--</button>-->
-							<!--Еще-->
-						<!--</a>-->
-						<!--<ul class="dropdown-menu" role="menu" aria-labelledby="navbarBritishDrop"></ul>-->
-					<!--</li>-->
+					<li class="dropdown hidden-xs hidden-sm">
+						<a href="#" id="navbarBritishDrop" class="dropdown-toggle" data-toggle="dropdown">
+							<button class="navbar-british-drop navbar-toggle" type="button">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							Еще
+						</a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="navbarBritishDrop"></ul>
+					</li>
 
 				</ul>
-			</div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
+			</div>
+		</div>
 	</nav>
 
 
@@ -276,6 +285,7 @@
 </header>
 
 <script src="js/swiper.min.js"></script>
+<script src="js/nested-navbar.js"></script>
 
 <script>
 	var swiper = new Swiper('.swiper-container', {
@@ -291,10 +301,6 @@
 
 
 <script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.droptabs.js"></script>
-<script>
-//	$(".droptabs").droptabs();
-</script>
 
 </body>
 </html>

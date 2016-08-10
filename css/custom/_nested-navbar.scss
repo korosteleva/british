@@ -57,16 +57,27 @@
 				}
 			}
 		}
+		.navbar-british-search {
+			display: none;
+		}
 	}
 
 
 	@media (max-width: $screen-sm-max) {
+
+		.navbar-header {
+			height: 80px;
+		}
+
 		> .container {
 			width: 100%;
 		}
 
-
 		.navbar-nav {
+
+			float: none;
+			width: auto;
+			margin: 0;
 
 			>li {
 				border-bottom: 1px solid #484848;
@@ -154,13 +165,7 @@
 					}
 				}
 			}
-		}
 
-
-
-
-
-		.navbar-nav {
 			li {
 				&.dropdown {
 					.dropdown-menu {
@@ -170,16 +175,46 @@
 			}
 		}
 
+
 		.navbar-collapse {
 			padding: 0;
 			background: $british_gray_dark;
-			.navbar-nav {
-				float: none;
-				width: auto;
-				margin: 0;
 
-				> li {
-					color: $british_gold;
+
+			.lang-block {
+				padding-top: 20px;
+				padding-right: 30px;
+			}
+		}
+
+		.navbar-british-search {
+			display: none;
+		}
+		&.collapse-in {
+			.navbar-british-search {
+				display: inline-block;
+				width: 65px;
+				height: 80px;
+				position: relative;
+
+				img {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+			.navbar-british-logo {
+				display: none;
+			}
+
+			.navbar-toggle {
+				background: url("img/collapsed-menu-close.png") #000000 no-repeat 50% 50%;
+				height: 80px;
+				width: 80px;
+				
+				.icon-bar {
+					display: none;
 				}
 			}
 		}
