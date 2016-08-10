@@ -18,11 +18,15 @@
 
 		li {
 			padding-bottom: 18px;
-			min-width: 185px;
+			width: 185px;
 			flex-grow: 1;
 
 			&:last-child {
 				padding-bottom: 0;
+			}
+
+			@media (max-width: $screen-xs-max) {
+				width: 100%;
 			}
 		}
 
@@ -30,7 +34,6 @@
 			color: $british_gold;
 			font-size: 12px;
 			text-transform: uppercase;
-			width: 150px;
 			display: inline-block;
 
 			@media (max-width: $screen-xs-max) {
@@ -49,9 +52,32 @@
 		}
 
 		img {
-			max-width: 300px;
-			width: 100%;
+			width: 90px;
 			height: auto;
+			position: absolute;
+			left: 0;
+		}
+
+		&-link {
+			position: relative;
+			padding-left: 110px;
+			display: inline-block;
+			height: 90px;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		span {
+			color: $british_gold;
+			font-size: 18px;
+			line-height: 22px;
+			font-weight: bold;
+			padding-top: 14px;
+			width: 200px;
+			display: inline-block;
+			text-transform: uppercase;
 		}
 	}
 
@@ -60,6 +86,21 @@
 		align-self: center;
 
 		a {
+			display: inline-block;
+			width: 25px;
+			height: 25px;
+			margin-right: -4px;
+			margin-left: 10px;
+
+			@media (max-width: $screen-xs-max) {
+				margin-right: 0;
+			}
+
+
+			&:first-child {
+				margin-left: 0;
+			}
+
 			&:hover {
 				text-decoration: none;
 			}
