@@ -174,4 +174,38 @@ header {
 		}
 	}
 	// swiper end
+
+
+	&.no-swiper {
+		padding-top: 280px;
+		height: auto;
+		background: url("../images/header-noswiper.jpg") transparent no-repeat 50% 0;
+		background-size: cover;
+
+		// todo move h1 to typography style
+		h1 {
+			text-transform: uppercase;
+			color: #ffffff;
+			font-size: 42px;
+			line-height: 58px;
+			letter-spacing: 7px;
+			display: block;
+			width: 100%;
+			text-align: center;
+			margin-top: 45px;
+			margin-bottom: 38px;
+		}
+
+		@media (max-width: $screen-sm-max) {
+			padding-top: 80px;
+			height: auto;
+
+			h1 {
+				font-size: 18px;
+				line-height: 30px;
+				margin-bottom: 25px;
+				margin-top: 25px;
+			}
+		}
+	}
 }
