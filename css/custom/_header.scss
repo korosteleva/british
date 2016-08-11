@@ -22,8 +22,13 @@ header {
 		}
 
 
-		.swiper-pagination-bullet-active {
-			background: $british_gold;
+		.swiper-pagination-bullets {
+			.swiper-pagination-bullet {
+				background: #ffffff;
+				&-active {
+					background: $british_gold;
+				}
+			}
 		}
 
 		// slide inside
@@ -31,6 +36,17 @@ header {
 		.swiper-slide {
 			background-position: center;
 			background-size: cover;
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: rgba(0, 0, 0, .5);
+			}
 
 			&_info {
 				position: absolute;
@@ -130,12 +146,12 @@ header {
 		.swiper-container {
 
 			.swiper-button-prev {
-				background-image: url(img/slider-arrow-left.png);
+				background-image: url(../images/slider-arrow-left.png);
 				left: 30px;
 				right: auto;
 			}
 			.swiper-button-next {
-				background-image: url(img/slider-arrow-right.png);
+				background-image: url(../images/slider-arrow-right.png);
 				right: 30px;
 				left: auto;
 			}

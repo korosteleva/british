@@ -2,7 +2,9 @@
 $(function () {
 
 	var eventName = 'click.customNavbar',
-		$navbarLinks = $('.navbar-nav > li.dropdown > a'),
+		$navbarLinks = $('#navbar-british-wrapper > .menu > li.expanded > a'),
+
+		OPEN_CLASS = 'open',
 
 		$topHeader = $('.navbar-british'),
 		$toggleMenuBtn = $topHeader.find('.navbar-toggle[data-target="#navbar-british-collapse"]');
@@ -18,7 +20,7 @@ $(function () {
 		$navbarLinks.on(eventName, function (evt) {
 			evt.preventDefault();
 
-			$(this).closest('li').toggleClass('active');
+			$(this).closest('li').toggleClass(OPEN_CLASS);
 		});
 	}
 

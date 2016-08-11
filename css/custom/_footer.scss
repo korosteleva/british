@@ -36,6 +36,10 @@
 			text-transform: uppercase;
 			display: inline-block;
 
+			&.active {
+				color: #ffffff;
+			}
+
 			@media (max-width: $screen-xs-max) {
 				width: auto;
 			}

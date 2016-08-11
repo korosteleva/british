@@ -4,7 +4,7 @@ body {
 }
 
 .border {
-	background: url('img/border.jpg') center top;
+	background: url('../images/border.jpg') center top;
 	width: 100%;
 	height: 5px;
 }
@@ -33,19 +33,19 @@ body {
 
 
 		&._fb {
-			background: url("img/soc/social-fb.png") transparent no-repeat 50% 50%;
+			background: url("../images/soc/social-fb.png") transparent no-repeat 50% 50%;
 			background-size: contain;
 
 			&:hover {
-				background-image: url("img/soc/social-fb_hover.png")
+				background-image: url("../images/soc/social-fb_hover.png")
 			}
 		}
 		&._tw {
-			background: url("img/soc/social-tw.png") transparent no-repeat 50% 50%;
+			background: url("../images/soc/social-tw.png") transparent no-repeat 50% 50%;
 			background-size: contain;
 
 			&:hover {
-				background-image: url("img/soc/social-tw_hover.png")
+				background-image: url("../images/soc/social-tw_hover.png")
 			}
 		}
 	}
@@ -64,6 +64,8 @@ body {
 		line-height: $langElementSize;
 		border-radius: 50%;
 		padding: 0;
+		box-shadow: none;
+		color: $british_gold;
 
 		&:first-child {
 			margin-left: 0;
