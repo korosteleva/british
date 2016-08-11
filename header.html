@@ -86,9 +86,7 @@
 						<li class="first leaf"><a href="/" title="" class="active">Главная</a></li>
 						<li class="leaf"><a href="/content/vozmozhnosti">Возможности</a></li>
 						<li class="leaf"><a href="/gallery" title="">Фотогалерея</a></li>
-						<li class="leaf"><a href="/teachers" title="">Преподаватели</a></li>
-						<li class="leaf"><a href="/content/kontakty">Контакты</a></li>
-						<li class="last expanded">
+						<li class="leaf expanded">
 							<a href="/content/o-licee" title="">О лицее</a>
 							<ul class="menu">
 								<li class="first leaf"><a href="/content/struktura">Структура</a></li>
@@ -105,6 +103,14 @@
 								<li class="last leaf"><a href="/advantage" title="">Преимущества</a></li>
 							</ul>
 						</li>
+						<li class="leaf"><a href="/teachers" title="">Преподаватели</a></li>
+						<li class="leaf"><a href="/gallery" title="">Фотогалерея</a></li>
+						<li class="leaf"><a href="/teachers" title="">Cл1</a></li>
+						<li class="leaf"><a href="/content/kontakty">Cл2</a></li>
+						<li class="leaf"><a href="/teachers" title="">Cл3</a></li>
+						<li class="leaf"><a href="/teachers" title="">Cл4</a></li>
+						<li class="last"><a href="/content/kontakty">Cл5</a></li>
+
 					</ul>
 				</div>
 			</div>
@@ -221,6 +227,7 @@
 
 <script src="js/swiper.min.js"></script>
 <script src="js/nested-navbar.js"></script>
+<script src="js/smart-dropdown.js"></script>
 
 <script>
 	var swiper = new Swiper('.swiper-container', {
@@ -232,6 +239,9 @@
 		effect: 'fade',
 		loop: true
 	});
+
+	$('#navbar-british-wrapper').children('.menu').smartDropdown();
+
 </script>
 
 

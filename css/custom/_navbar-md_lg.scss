@@ -58,6 +58,15 @@
 						left: 0;
 						transform: none;
 					}
+
+					&.expanded-to-left {
+						> .menu {
+							top: 100%;
+							left: auto;
+							right: 0;
+							transform: none;
+						}
+					}
 				}
 
 				&:hover {
@@ -163,6 +172,28 @@
 		}
 	}
 
+	.smart-dropdown {
+		> a {
+			display: flex;
+			align-items: baseline;
+			justify-content: space-between;
+
+			.navbar-toggle {
+				display: inline-block;
+				margin: 0;
+				padding: 0 0 0 10px;
+			}
+		}
+
+		&:hover {
+			.navbar-toggle {
+				.icon-bar {
+					background: $british_gray_dark;
+				}
+			}
+		}
+
+	}
 
 	.icon-bar {
 		width: 18px;
