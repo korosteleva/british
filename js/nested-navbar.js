@@ -1,5 +1,4 @@
-
-$(function () {
+(function ($) {
 
 	var eventName = 'click.customNavbar',
 		$navbarLinks = $('#navbar-british-wrapper > .menu > li.expanded > a'),
@@ -47,7 +46,7 @@ $(function () {
 		$topHeader.toggleClass('collapse-in');
 	})
 
-}());
+}(jQuery));
 
 
 
