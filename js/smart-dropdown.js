@@ -164,6 +164,9 @@
 		}
 
 		return initSmartDropdown();
-	}
+	};
+
+	$('#navbar-british-wrapper').children('.menu').smartDropdown();
+
 
 }(jQuery));
