@@ -75,4 +75,16 @@ body {
 			text-decoration: none;
 		}
 	}
+
+
+	&._big {
+		$langElementSize: 40px;
+
+		a {
+			width: $langElementSize;
+			height: $langElementSize;
+			font-size: 13px;
+			line-height: $langElementSize;
+		}
+	}
 }

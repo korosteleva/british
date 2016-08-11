@@ -6,6 +6,7 @@
 	border-radius: 30px;
 	text-transform: uppercase;
 	transition: color 0.3s, background 0.3s;
+	box-shadow: none;
 
 	&:hover {
 		background: $british_gold;
@@ -15,16 +16,16 @@
 	&.active {
 		background: $british_gold;
 		color: #333333;
+		box-shadow: none;
 	}
 
-	//&_light {
-	//	background: transparent;
-	//	color: #333333;
-	//
-	//	&:hover {
-	//		color: #000000;
-	//	}
-	//}
+	&._dark-color {
+		color: #333333;
+
+		&:hover {
+			color: #000000;
+		}
+	}
 
 
 	@media (max-width: $screen-xs-max) {
