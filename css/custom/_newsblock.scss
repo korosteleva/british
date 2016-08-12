@@ -1,0 +1,70 @@
+.news-block {
+
+	&-element {
+		margin-top: 30px;
+		margin-bottom: 30px;
+
+		&:before,
+		&:after {
+			content: '';
+			display: table;
+		}
+		&:after {
+			clear: both;
+		}
+
+	}
+
+
+	&-img {
+		width: 100%;
+	}
+
+	&-title {
+		font-family: 'PT Serif', serif;
+		font-size: 24px;
+		line-height: 1.5;
+		color: $british_gray_dark;
+		margin: 31px 0 11px 0;
+
+	}
+
+	&-description {
+		text-align: left;
+		color: #555555;
+		margin-bottom: 22px;
+	}
+
+	&-date {
+		float: left;
+		padding-right: 45px;
+	}
+
+	&-date,
+	.comments {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 11px;
+		color: #555555;
+	}
+
+	.comments {
+		float: left;
+		padding: 1px 4px;
+		border-radius: 2px;
+		border: 1px solid $british_gold;
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-top: 6px solid $british_gold;
+			border-right: 10px solid transparent;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%) translateY(100%);
+		}
+
+	}
+}
