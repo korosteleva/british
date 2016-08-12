@@ -1,0 +1,69 @@
+.page-wrapper {
+
+	.page-block {
+		padding: 50px 0;
+	}
+}
+
+h2 {
+	font-family: 'PT Serif', serif;
+	font-size: 24px;
+	line-height: 36px;
+	color: $british_gray_dark;
+	position: relative;
+	margin: 30px 0 45px 0;
+	padding: 0;
+
+	@media (max-width: $screen-xs-max) {
+		margin: 20px 0 45px 0;
+	}
+
+
+	&:after {
+		content: '';
+		width: 200px;
+		max-width: 100%;
+		height: 1px;
+		background: $british_gold;
+		position: absolute;
+		bottom: -21px;
+		left: 0;
+	}
+}
+
+.page-text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	line-height: 1.7;
+	margin-bottom: 15px;
+	text-align: justify;
+
+	@media (max-width: $screen-xs-max) {
+		font-size: 13px;
+		text-align: left;
+	}
+}
+
+.block-image {
+	position: relative;
+	margin: 15px 0;
+
+	img {
+		width: 100%;
+	}
+
+	&-title {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		color: #ffffff;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 13px;
+		line-height: 1.4;
+		background: url('../images/block-image-bg.png') rgba(0, 36, 125, .8) no-repeat 20px 50%;
+		padding: 12px 20px 12px 64px;
+
+
+	}
+}
