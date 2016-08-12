@@ -20,6 +20,8 @@
 		position: relative;
 		padding-left: 112px;
 		padding-top: 15px;
+		display: block;
+		float: left;
 
 		&:hover {
 			text-decoration: none;
@@ -45,10 +47,29 @@
 	}
 
 	&-list {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 		padding-top: 20px;
+		&:before,
+		&:after {
+			content: '';
+			display: table;
+		}
+
+		&:after {
+			clear: both;
+		}
+	}
+
+	&-others {
+		float: right;
+		&:before,
+		&:after {
+			content: '';
+			display: table;
+		}
+
+		&:after {
+			clear: both;
+		}
 	}
 
 	&-wrapped {
@@ -57,6 +78,8 @@
 		padding: 18px 15px 18px 112px;
 		position: relative;
 		text-align: left;
+		display: block;
+		float: left;
 
 		&:hover {
 			text-decoration: none;
@@ -101,6 +124,16 @@
 
 	@media (min-width: $screen-lg-min) {
 
+		.lang-block {
+			float: left;
+			margin: 32px 10px;
+		}
+
+		.search {
+			float: left;
+			margin: 40px 10px;
+		}
+
 		&-lyceum,
 		&-kem {
 			transition: background 0.3s;
@@ -111,6 +144,7 @@
 
 		&-lyceum {
 			width: 270px;
+			margin-right: 20px;
 		}
 
 		&-kem {
