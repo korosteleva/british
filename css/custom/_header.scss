@@ -179,12 +179,23 @@ header {
 	&.no-swiper {
 		padding-top: 280px;
 		height: auto;
-		background: url("../images/header-noswiper.jpg") transparent no-repeat 50% 0;
+		background: url("../images/header-noswiper.jpg") transparent no-repeat 50% 50%;
 		background-size: cover;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(0, 0, 0, .5);
+		}
 
 		// todo move h1 to typography style
 		h1 {
 			text-transform: uppercase;
+			position: relative;
 			color: #ffffff;
 			font-size: 42px;
 			line-height: 58px;
