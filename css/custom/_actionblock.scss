@@ -1,0 +1,72 @@
+.action-block {
+	height: 200px;
+	background: url('../images/action-block-bg.jpg') transparent no-repeat 50% 50%;
+	background-size: cover;
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 36, 125, .8);
+	}
+
+	&-title,
+	&-button {
+		position: relative;
+	}
+
+	&-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+
+	&-title {
+		color: #ffffff;
+		font-size: 28px;
+		line-height: 36px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: 600;
+		text-align: center;
+	}
+
+	&-button {
+		.btn {
+			background: url(../images/action-block-btn.png) $british_gold no-repeat 20px 50%;
+			color: $british_gray_dark;
+			padding-left: 50px;
+		}
+	}
+
+	@media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+		&-title {
+			font-size: 22px;
+			line-height: 36px;
+		}
+	}
+
+	@media (max-width: $screen-xs-max) {
+		height: 225px;
+
+		&-wrapper {
+			display: block;
+		}
+
+		&-title {
+			font-size: 18px;
+			line-height: 26px;
+			padding: 52px 0 25px 0;
+		}
+
+		&-button {
+			text-align: center;
+		}
+	}
+
+}
