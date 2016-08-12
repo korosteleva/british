@@ -166,7 +166,11 @@
 		return initSmartDropdown();
 	};
 
-	$('#navbar-british-wrapper').children('.menu').smartDropdown();
+
+	$(document).ready(function() {
+		$('#navbar-british-wrapper').children('.menu').smartDropdown();
+	});
+
 
 
 }(jQuery));

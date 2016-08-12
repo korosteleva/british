@@ -1,11 +1,14 @@
 .footer {
 	background: #353334;
 
-	&-nav {
+	ul.footer-nav,
+	.block ul.footer-nav {
 
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		margin: 0;
+		padding: 0;
 
 		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 			padding-top: 30px;
@@ -49,6 +52,9 @@
 	&-logo {
 		&_wrapper {
 			display: flex;
+			.content {
+				display: flex;
+			}
 			@media (max-width: $screen-xs-max) {
 				order: 1;
 				padding-top: 25px;
@@ -105,6 +111,10 @@
 			padding: 50px 0;
 			display: flex;
 			flex-direction: column;
+
+			.region {
+				width: 100%;
+			}
 		}
 
 	}
