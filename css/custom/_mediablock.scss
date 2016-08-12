@@ -1,8 +1,16 @@
 .media-block {
-	height: 480px;
+	$blockHeight: 480px;
+	height: $blockHeight;
+	display: flex;
+
+	&:nth-child(even) {
+		.media-block_img {
+			order: 1;
+		}
+	}
 
 	&_img {
-		height: 480px;
+		height: $blockHeight;
 		background-size: cover;
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
@@ -31,11 +39,68 @@
 		}
 	}
 
+	@media (min-width: $screen-md-min) {
+
+		$blochSidePadding: 60px;
+		&_text {
+			padding-left: $blochSidePadding;
+			padding-right: $blochSidePadding;
+		}
+
+		&_title {
+			padding-left: $blochSidePadding;
+			padding-right: $blochSidePadding;
+		}
+
+		&_buttons {
+			padding-left: $blochSidePadding;
+			padding-right: $blochSidePadding;
+		}
+	}
+
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		$blockHeight: 400px;
+		$blochSidePadding: 30px;
+
+		height: $blockHeight;
+
+		&_img {
+			height: $blockHeight;
+		}
+
+		&_text {
+			height: 155px;
+			margin-bottom: 20px;
+			padding-left: $blochSidePadding;
+			padding-right: $blochSidePadding;
+		}
+
+		&_title {
+			padding-left: $blochSidePadding;
+			padding-right: $blochSidePadding;
+		}
+
+		&_buttons {
+			padding-left: $blochSidePadding;
+			padding-right: $blochSidePadding;
+		}
+
+	}
+
+
+
+
 	@media (max-width: $screen-xs-max) {
+
+		&:nth-child(even),
+		&:nth-child(even) {
+			.media-block_img {
+				order: -1;
+			}
+		}
 
 		&_img {
 			height: 220px;
-			order: -1;
 		}
 
 		&_content {
@@ -59,28 +124,29 @@
 		flex-direction: column;
 		height: auto;
 		margin-bottom: 60px;
-		//&:last-of-type {
-		//	margin-bottom: 0;
-		//}
 	}
 
 
 
 	&_full-width {
 
-		.media-block_content {
+		.media-block_title,
+		.media-block_text,
+		.media-block_buttons {
 			box-sizing: border-box;
 
+			$deltaWidth: 30px;
+
 			@media (min-width: $screen-lg-min) {
-				width: $screen-lg/2;
+				width: $screen-lg/2 - $deltaWidth;
 			}
 
 			@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-				width: $screen-md/2;
+				width: $screen-md/2 - $deltaWidth;
 			}
 
 			@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-				width: $screen-sm/2;
+				width: $screen-sm/2 - $deltaWidth;
 			}
 
 			@media (max-width: $screen-xs-max) {
@@ -88,6 +154,18 @@
 			}
 
 		}
+
+		&:nth-child(even) {
+			.media-block_title,
+			.media-block_text,
+			.media-block_buttons {
+				margin-right: 0;
+				margin-left: auto;
+				box-sizing: border-box;
+
+			}
+		}
+
 	}
 
 }
