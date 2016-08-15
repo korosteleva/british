@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Photo gallery</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div class="container sidebar sidebar-vertical">
+	<ul class="sidebar-nav nav nav-pills nav-stacked" data-mcs-theme="dark">
+		<li><a href="#" class="active">Миссия</a></li>
+		<li><a href="#">Уровни обучения</a></li>
+		<li><a href="#">Поступления</a></li>
+		<li><a href="#">Выпускники</a></li>
+		<li><a href="#">Документы</a></li>
+		<li><a href="#">Галерея</a></li>
+	</ul>
+</div>
+
+<div id="block-system-main" class="block block-system">
+
+
+	<div class="content">
+		<div class="view view-gallery view-id-gallery view-display-id-page view-dom-id-467c496424822e1ef1518b023e8b937b">
+
+
+			<div class="view-content">
+				<div class="views-row views-row-1 views-row-odd views-row-first">
+
+					<div class="views-field views-field-field-cover">
+						<div class="field-content">
+							<a href="/ru/content/chetvertaya"><img
+								src="http://tsm.4each.ru/sites/default/files/styles/large/public/gallery_cover/005_0.jpg?itok=aGprkjsX"
+								width="480" height="300" alt=""></a>
+						</div>
+					</div>
+					<div class="views-field views-field-title"><span class="field-content"><a
+							href="/ru/content/chetvertaya">Четвертая</a></span></div>
+					<div class="views-field views-field-field-gallery-category">
+						<div class="field-content">Мероприятия</div>
+					</div>
+					<div class="views-field views-field-field-gallery-county">
+						<div class="field-content">15</div>
+					</div>
+
+				</div>
+				<div class="views-row views-row-2 views-row-even">
+
+					<div class="views-field views-field-field-cover">
+						<div class="field-content"><a href="/ru/content/tertya"><img
+								src="http://tsm.4each.ru/sites/default/files/styles/large/public/gallery_cover/008.jpg?itok=tQfpL6u_"
+								width="480" height="270" alt=""></a></div>
+					</div>
+					<div class="views-field views-field-title"><span class="field-content"><a href="/ru/content/tertya">Тертья</a></span>
+					</div>
+					<div class="views-field views-field-field-gallery-category">
+						<div class="field-content">Студенты</div>
+					</div>
+					<div class="views-field views-field-field-gallery-county">
+						<div class="field-content">45</div>
+					</div>
+				</div>
+				<div class="views-row views-row-3 views-row-odd">
+
+					<div class="views-field views-field-field-cover">
+						<div class="field-content"><a href="/ru/content/vtoraya"><img
+								src="http://tsm.4each.ru/sites/default/files/styles/large/public/gallery_cover/002.jpg?itok=trPnP2uD"
+								width="480" height="300" alt=""></a></div>
+					</div>
+					<div class="views-field views-field-title"><span class="field-content"><a
+							href="/ru/content/vtoraya">Вторая</a></span></div>
+					<div class="views-field views-field-field-gallery-category">
+						<div class="field-content">Школа</div>
+					</div>
+					<div class="views-field views-field-field-gallery-county">
+						<div class="field-content">48</div>
+					</div>
+				</div>
+				<div class="views-row views-row-4 views-row-even views-row-last">
+
+					<div class="views-field views-field-field-cover">
+						<div class="field-content"><a href="/ru/content/pervaya"><img
+								src="http://tsm.4each.ru/sites/default/files/styles/large/public/gallery_cover/001.jpg?itok=0vJo73a1"
+								width="480" height="294" alt=""></a></div>
+					</div>
+					<div class="views-field views-field-title"><span class="field-content"><a
+							href="/ru/content/pervaya">Первая</a></span></div>
+					<div class="views-field views-field-field-gallery-category">
+						<div class="field-content">Мероприятия</div>
+						<div class="views-field views-field-field-gallery-county">
+							<div class="field-content">5</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+<script src="js/_script.js"></script>
+<script type="text/javascript">
+
+	(function ($) {
+		var $galleryBlock = $('.view-id-gallery');
+		$galleryBlock.addClass('container');
+		$galleryBlock.find('.view-content').addClass('row');
+		$galleryBlock.find('.views-row').addClass('col-lg-4').addClass('col-md-4').addClass('col-sm-6').addClass('col-xs-12');
+
+		var $wrapper;
+		$galleryBlock.find('.views-row').each(function (index, element) {
+			$wrapper = $('<div/>', {
+				class: 'view-gallery-wrapper'
+			});
+
+			$wrapper.html($(element).html());
+			$(element).html($wrapper);
+		});
+
+	}(jQuery));
+</script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+.view-id-gallery {
+
+	.view-content {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.views-row {
+		margin-bottom: 43px;
+		.view-gallery-wrapper {
+			position: relative;
+			box-shadow: 2px 2px 20px 1px #eeeeee;
+		}
+	}
+
+	.views-field-field-cover {
+		a {
+			$imageHeight: 227px;
+
+			display: block;
+			height: $imageHeight;
+			overflow: hidden;
+			position: relative;
+
+			img {
+				width: 100%;
+				height: $imageHeight;
+			}
+
+			&:after {
+				background: url(../images/arrow_photo_bottom.png) no-repeat 50% 0 transparent;
+				bottom: 0;
+				content: "";
+				display: block;
+				height: 8px;
+				position: absolute;
+				width: 100%;
+			}
+		}
+	}
+
+	.views-field-title {
+		text-align: center;
+		padding-top: 8px;
+		a {
+			color: #444444;
+			font-size: 18px;
+			line-height: 28px;
+			font-family: 'PT Serif', serif;
+			letter-spacing: 0.5px;
+		}
+	}
+
+	.views-field-field-gallery-category {
+		text-align: center;
+		font-size: 11px;
+		color: #cccccc;
+		font-family: "Open Sans", sans-serif;
+		padding-bottom: 23px;
+	}
+
+	.views-field-field-gallery-county {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		background: rgba(255, 255, 255, 0.5);
+		color: #333333;
+		font-size: 11px;
+		line-height: 25px;
+		font-family: "Open Sans", sans-serif;
+		height: 25px;
+		width: 25px;
+		border-radius: 50%;
+		text-align: center;
+	}
+}
+
+@media (max-width: $screen-xs-max) {
+	.view-id-gallery {
+
+		.views-field-field-cover {
+			a {
+				height: auto;
+
+				img {
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+.node-gallery {
+	.field-items {
+		margin: 0 auto;
+	}
+	.field-item {
+		img {
+			box-sizing: border-box;
+			width: 350px;
+			padding: 1px 0;
+		}
+	}
+
+
+	.field-type-youtube {
+		.field-item {
+			position: relative;
+			cursor: pointer;
+
+			a {
+				display: block;
+				position: relative;
+				z-index: 2;
+				overflow: hidden;
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: url('../images/video-overlay-play.png') rgba(0, 36, 125, 0.7) no-repeat 50% 50%;
+				}
+
+				img {
+					transition: all 1.2s ease-in-out;
+				}
+
+				&:hover {
+					img {
+						-webkit-backface-visibility: hidden;
+						-webkit-transform: translateZ(0) scale(1.1, 1.1);
+					}
+				}
+			}
+		}
+	}
+
+
+	.field-type-image {
+		.field-item {
+			position: relative;
+			cursor: pointer;
+
+			a {
+				display: block;
+				position: relative;
+				z-index: 2;
+				overflow: hidden;
+				img {
+					transition: all 1.2s ease-in-out;
+				}
+
+				&:hover {
+					img {
+						-webkit-backface-visibility: hidden;
+						-webkit-transform: translateZ(0) scale(1.1, 1.1);
+					}
+				}
+			}
+		}
+	}
+
+}
+
+.field-name-field-gallery-category {
+	.field-items {
+		margin: 0;
+	}
+}

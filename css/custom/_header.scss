@@ -94,8 +94,12 @@ header {
 					color: #ffffff;
 					text-transform: uppercase;
 					font-size: 60px;
+					line-height: 1;
 					text-align: center;
 					padding-top: 7px;
+					&:after {
+						content: none;
+					}
 
 					.swiper-slide_title-extra {
 						display: block;

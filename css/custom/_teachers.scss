@@ -1,0 +1,103 @@
+.view-id-teachers {
+	.views-row {
+		margin-top: 50px;
+		margin-bottom: 50px;
+		display: flex;
+		flex-wrap: wrap;
+
+		.views-field-field-cover {
+
+			.field-content {
+				margin-left: -$grid-gutter-width/2;
+				margin-right: -$grid-gutter-width/2;
+			}
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		.view-teacher-info-wrapper {
+			background: #f7f7f7;
+			padding-top: 50px;
+			padding-left: 65px;
+		}
+
+		.views-field-title {
+			font-family: 'PT Serif', serif;
+			font-size: 24px;
+			line-height: 36px;
+			color: #444444;
+			position: relative;
+			letter-spacing: .5px;
+			margin-bottom: 42px;
+
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: -20px;
+				left: 0;
+				width: 200px;
+				height: 1px;
+				background: $british_gold;
+			}
+		}
+
+		.views-field-field-post {
+			font-family: "Open Sans", sans-serif;
+			font-size: 15px;
+			line-height: 26px;
+			color: $british_gray_dark;
+			padding-bottom: 23px;
+		}
+
+		.views-label-field-university,
+		.views-label-field-department {
+			color: #cccccc;
+			position: relative;
+			padding-left: 40px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+
+				width: 25px;
+				height: 25px;
+				background: url('../images/teachers-arrow.png') no-repeat 50% 50%;
+			}
+		}
+
+		.views-field-field-department,
+		.views-field-field-university {
+			font-family: 'PT Serif', serif;
+			font-size: 16px;
+			line-height: 24px;
+			padding-bottom: 18px;
+
+			.field-content {
+				padding-left: 40px;
+				color: $british_gray_dark;
+			}
+
+		}
+
+		@media (min-width: $screen-md-min) {
+			&:nth-child(even) {
+				.views-field-field-cover {
+					order: 1;
+				}
+			}
+		}
+
+		@media (max-width: $screen-sm-max) {
+			.view-teacher-info-wrapper {
+				padding: 30px;
+			}
+		}
+
+
+	}
+}

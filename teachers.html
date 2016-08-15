@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Photo gallery</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,cyrillic-ext,cyrillic'
+	      rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet'
+	      type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic,cyrillic-ext'
+	      rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div id="block-system-main" class="block block-system">
+
+
+	<div class="content">
+		<div class="view view-teachers view-id-teachers view-display-id-page view-dom-id-0fb075951c7336a28d777daa13f5e12d">
+
+
+			<div class="view-content">
+
+				<div class="views-row views-row-1 views-row-odd views-row-first">
+
+					<div class="views-field views-field-field-cover">
+						<div class="field-content"><img
+								src="http://tsm.4each.ru/sites/default/files/styles/large/public/teachers/011.jpg?itok=voQnI0mV"
+								width="480" height="345" alt=""></div>
+					</div>
+					<div class="views-field views-field-title"><span class="field-content">Джеймс Фрэнсис Кэмерон</span>
+					</div>
+					<div class="views-field views-field-field-post">
+						<div class="field-content">Преподаватель английского языка</div>
+					</div>
+					<div class="views-field views-field-field-department"><span
+							class="views-label views-label-field-department">Кафедра: </span>
+
+						<div class="field-content">Иностранных языков</div>
+					</div>
+					<div class="views-field views-field-field-university"><span
+							class="views-label views-label-field-university">Университет: </span>
+
+						<div class="field-content">Московский государственный университет</div>
+					</div>
+				</div>
+
+
+				<div class="views-row views-row-2 views-row-even">
+
+					<div class="views-field views-field-field-cover">
+						<div class="field-content"><img
+								src="http://tsm.4each.ru/sites/default/files/styles/large/public/teachers/150429-elementary-school-stock.jpg?itok=9-GAV5uE"
+								width="480" height="320" alt=""></div>
+					</div>
+					<div class="views-field views-field-title"><span
+							class="field-content">Ма́ргарет Хи́льда Тэ́тчер</span></div>
+					<div class="views-field views-field-field-post">
+						<div class="field-content">Преподаватель английского языка</div>
+					</div>
+					<div class="views-field views-field-field-department"><span
+							class="views-label views-label-field-department">Кафедра: </span>
+
+						<div class="field-content">Иностранных языков</div>
+					</div>
+					<div class="views-field views-field-field-university"><span
+							class="views-label views-label-field-university">Университет: </span>
+
+						<div class="field-content">Московский государственный университет</div>
+					</div>
+				</div>
+				<div class="views-row views-row-3 views-row-odd views-row-last">
+
+					<div class="views-field views-field-field-cover">
+						<div class="field-content"><img
+								src="http://tsm.4each.ru/sites/default/files/styles/large/public/teachers/010.jpg?itok=WDer6BOm"
+								width="480" height="360" alt=""></div>
+					</div>
+					<div class="views-field views-field-title"><span class="field-content">Дже́ссика Энн Си́мпсон</span>
+					</div>
+					<div class="views-field views-field-field-post">
+						<div class="field-content">Преподаватель английского языка</div>
+					</div>
+					<div class="views-field views-field-field-department"><span
+							class="views-label views-label-field-department">Кафедра: </span>
+
+						<div class="field-content">Иностранных языков</div>
+					</div>
+					<div class="views-field views-field-field-university"><span
+							class="views-label views-label-field-university">Университет: </span>
+
+						<div class="field-content">Московский государственный университет</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+
+	(function ($) {
+		var $teachersBlock = $('.view-id-teachers');
+		$teachersBlock.find('.view-content').addClass('container');
+		$teachersBlock.find('.views-row').addClass('row');
+
+		$teachersBlock.find('.views-field-field-cover').addClass('col-lg-6').addClass('col-md-6').addClass('col-sm-12').addClass('col-xs-12');
+
+		var $wrapper, $wrapperInnerHtml;
+		$teachersBlock.find('.views-row').each(function (index, element) {
+			$wrapper = $('<div/>', {
+				class: 'view-teacher-info-wrapper col-lg-6 col-md-6 col-sm-12 col-xs-12'
+			});
+
+			$wrapper.append($(element).find('.views-field-title'));
+			$wrapper.append($(element).find('.views-field-field-post'));
+			$wrapper.append($(element).find('.views-field-field-department'));
+			$wrapper.append($(element).find('.views-field-field-university'));
+
+			$(element).find('.views-field-title').remove();
+			$(element).find('.views-field-field-post').remove();
+			$(element).find('.views-field-field-department').remove();
+			$(element).find('.views-field-field-university').remove();
+
+			$(element).append($wrapper);
+		});
+
+
+
+	}(jQuery));
+</script>
+</body>
+</html>
