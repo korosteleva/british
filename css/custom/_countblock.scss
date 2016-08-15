@@ -1,5 +1,5 @@
 .count-block {
-	background: url('../images/count-block-bg.jpg') transparent no-repeat 50% 50%;
+	background: url('../images/count-block-bg.jpg') transparent no-repeat 50% 50% fixed ;
 	background-size: cover;
 	position: relative;
 	padding-top: 112px;
@@ -13,6 +13,10 @@
 		right: 0;
 		bottom: 0;
 		background: rgba(0, 36, 125, .8);
+	}
+
+	img {
+		width: 152px;
 	}
 
 	&-element {
@@ -80,19 +84,39 @@
 		padding-top: 50px;
 		padding-bottom: 50px;
 
+		img {
+			width: 80px;
+		}
+
 		&-number {
 			padding-top: 12px;
 			span {
 				font-size: 36px;
+				&:before,
+				&:after {
+					width: 25px;
+				}
+				&:before {
+					left: -9px;
+				}
+				&:after {
+					right: -9px;
+				}
 			}
 		}
 
 		&-element {
 			padding-bottom: 50px;
 
-			&:last-of-type {
+			&:nth-child(3),
+			&:nth-child(4) {
 				padding-bottom: 0;
 			}
+		}
+
+		&-title {
+			font-size: 18px;
+			padding-top: 0;
 		}
 	}
 

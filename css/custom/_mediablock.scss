@@ -1,38 +1,41 @@
 .media-block {
+
 	$blockHeight: 480px;
 	height: $blockHeight;
 	display: flex;
 
-	&:nth-child(even) {
-		.media-block_img {
-			order: 1;
+	.advantage_img  {
+		padding: 0;
+		img {
+			width: 100% !important;
+			height: $blockHeight !important;
 		}
 	}
 
-	&_img {
-		height: $blockHeight;
-		background-size: cover;
-		background-position: 50% 50%;
-		background-repeat: no-repeat;
-	}
-
-	&_content {
+	.advantage_text {
 		padding-top: 50px;
 	}
 
-	&_title {
+	.views-field-title {
 		padding-bottom: 15px;
 		font-size: 32px;
 		line-height: 36px;
+		a {
+			color: $british_gray_dark;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 
-	&_text {
+	.views-field-field-teaser {
 		height: 175px;
 		margin-bottom: 40px;
 		overflow: auto;
 	}
 
-	&_buttons {
+	.views-field-view-node {
 		.lang-block {
 			display: inline-block;
 			margin-left: 6px;
@@ -42,17 +45,17 @@
 	@media (min-width: $screen-md-min) {
 
 		$blochSidePadding: 60px;
-		&_text {
+		.views-field-field-teaser {
 			padding-left: $blochSidePadding;
 			padding-right: $blochSidePadding;
 		}
 
-		&_title {
+		.views-field-title {
 			padding-left: $blochSidePadding;
 			padding-right: $blochSidePadding;
 		}
 
-		&_buttons {
+		.views-field-view-node {
 			padding-left: $blochSidePadding;
 			padding-right: $blochSidePadding;
 		}
@@ -64,31 +67,31 @@
 
 		height: $blockHeight;
 
-		&_img {
-			height: $blockHeight;
+		.advantage_img {
+			img {
+				height: $blockHeight !important;
+			}
+
 		}
 
-		&_text {
+		.views-field-field-teaser {
 			height: 155px;
 			margin-bottom: 20px;
 			padding-left: $blochSidePadding;
 			padding-right: $blochSidePadding;
 		}
 
-		&_title {
+		.views-field-title {
 			padding-left: $blochSidePadding;
 			padding-right: $blochSidePadding;
 		}
 
-		&_buttons {
+		.views-field-view-node {
 			padding-left: $blochSidePadding;
 			padding-right: $blochSidePadding;
 		}
 
 	}
-
-
-
 
 	@media (max-width: $screen-xs-max) {
 
@@ -99,21 +102,24 @@
 			}
 		}
 
-		&_img {
-			height: 220px;
+		.advantage_img {
+			img {
+				height: 220px !important;
+			}
+
 		}
 
 		&_content {
 			padding-top: 32px;
 		}
 
-		&_title {
+		.views-field-title {
 			padding-bottom: 15px;
 			font-size: 20px;
 			line-height: 24px;
 		}
 
-		&_text {
+		.views-field-field-teaser {
 			height: auto;
 			font-size: 13px;
 			line-height: 24px;
@@ -126,46 +132,60 @@
 		margin-bottom: 60px;
 	}
 
+}
 
-
-	&_full-width {
-
-		.media-block_title,
-		.media-block_text,
-		.media-block_buttons {
-			box-sizing: border-box;
-
-			$deltaWidth: 30px;
-
-			@media (min-width: $screen-lg-min) {
-				width: $screen-lg/2 - $deltaWidth;
-			}
-
-			@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-				width: $screen-md/2 - $deltaWidth;
-			}
-
-			@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-				width: $screen-sm/2 - $deltaWidth;
-			}
-
-			@media (max-width: $screen-xs-max) {
-				width: 100%;
-			}
-
+.views-row {
+	&:nth-child(even) {
+		.advantage_img {
+			order: 1;
 		}
+	}
 
+	@media (max-width: $screen-xs-max) {
+
+		&:nth-child(even),
 		&:nth-child(even) {
-			.media-block_title,
-			.media-block_text,
-			.media-block_buttons {
-				margin-right: 0;
-				margin-left: auto;
-				box-sizing: border-box;
-
+			.advantage_img {
+				order: -1;
 			}
 		}
+	}
+}
 
+.media-block_full-width {
+
+	.views-field-title,
+	.views-field-field-teaser,
+	.views-field-view-node {
+		box-sizing: border-box;
+
+		$deltaWidth: 30px;
+
+		@media (min-width: $screen-lg-min) {
+			width: $screen-lg/2 - $deltaWidth;
+		}
+
+		@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+			width: $screen-md/2 - $deltaWidth;
+		}
+
+		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+			width: $screen-sm/2 - $deltaWidth;
+		}
+
+		@media (max-width: $screen-xs-max) {
+			width: 100%;
+		}
+	}
+
+	&:nth-of-type(even) {
+		.views-field-title,
+		.views-field-field-teaser,
+		.views-field-view-node {
+			margin-right: 0;
+			margin-left: auto;
+			box-sizing: border-box;
+		}
 	}
 
 }
