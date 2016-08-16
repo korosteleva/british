@@ -108,8 +108,15 @@
 <script type="text/javascript">
 	(function ($) {
 		var $newsBlock = $('#block-views-news-block-block');
-		$newsBlock.find('.view-content').addClass('row');
-		$newsBlock.addClass('container');
+		if ($newsBlock.length) {
+			$newsBlock.find('.view-content').addClass('row');
+			$newsBlock.addClass('container');
+		}
+
+		var $newsPage = $('#block-system-main').find('.view-id-news_block');
+		if ($newsPage) {
+			$newsBlock.find('.view-content').addClass('row');
+		}
 	}(jQuery));
 </script>
 </body>

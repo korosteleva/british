@@ -19,19 +19,13 @@
 
 h2 {
 	font-family: 'PT Serif', serif;
-	font-size: 24px;
+	font-size: 32px;
 	line-height: 36px;
 	color: $british_gray_dark;
 	position: relative;
-	margin: 30px 0 45px 0;
+	margin: 30px 0 55px 0;
 	padding: 0;
-
-	@media (max-width: $screen-xs-max) {
-		margin: 20px 0 45px 0;
-		font-size: 20px;
-		line-height: 24px;
-	}
-
+	letter-spacing: .6px;
 
 	&:after {
 		content: '';
@@ -40,12 +34,25 @@ h2 {
 		height: 1px;
 		background: $british_gold;
 		position: absolute;
-		bottom: -21px;
+		bottom: -40px;
 		left: 0;
 	}
+
+	@media (max-width: $screen-xs-max) {
+		margin: 20px 0 25px 0;
+		font-size: 20px;
+		line-height: 24px;
+
+		&:after {
+			width: 100px;
+			bottom: -26px;
+		}
+	}
+
 }
 
-#page-wrapper p {
+#page-wrapper p,
+.page-wrapper p {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 15px;
 	line-height: 1.7;
