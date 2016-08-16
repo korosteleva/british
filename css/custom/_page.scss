@@ -52,7 +52,9 @@ h2 {
 }
 
 #page-wrapper p,
-.page-wrapper p {
+#page-wrapper ul, #page-wrapper ol,
+.page-wrapper p,
+.page-wrapper ul, .page-wrapper ol {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 15px;
 	line-height: 1.7;
@@ -62,6 +64,11 @@ h2 {
 		font-size: 13px;
 		line-height: 1.9;
 	}
+}
+
+#page-wrapper ul, #page-wrapper ol,
+.page-wrapper ul, .page-wrapper ol {
+
 }
 
 .block-image {
@@ -86,4 +93,9 @@ h2 {
 
 
 	}
+}
+
+
+.language-switcher-locale-url {
+	display: none;
 }

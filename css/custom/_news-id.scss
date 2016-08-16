@@ -1,0 +1,34 @@
+.node-news {
+	.field-type-datetime,
+	.field-name-field-news-category a {
+		font-size: 18px;
+		line-height: 36px;
+		color: #cccccc;
+		font-family: 'PT Serif', serif;
+		float: left
+	}
+
+	.field-type-datetime {
+		padding-right: 25px;
+	}
+
+	.field-name-field-news-category {
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+	}
+
+	.field-type-image {
+		margin-bottom: 45px;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.field-type-text-with-summary {
+		text-align: justify;
+	}
+}
