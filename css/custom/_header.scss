@@ -8,7 +8,7 @@ header {
 	}
 
 	@media (max-width: $screen-xs-max) {
-		height: 420px;
+		height: 415px;
 	}
 
 	//swiper start
@@ -118,10 +118,13 @@ header {
 
 					@media (max-width: $screen-xs-max) {
 						font-size: 30px;
-						padding-top: 42px;
+						padding-top: 63px;
+						margin: 0;
+						line-height: 1.3;
 						.swiper-slide_title-extra {
 							font-size: 18px;
-							padding-top: 8px;
+							padding-top: 4px;
+							line-height: 1.2;
 						}
 					}
 
@@ -136,7 +139,7 @@ header {
 					padding-top: 46px;
 
 					@media (max-width: $screen-xs-max) {
-						padding-top: 31px;
+						padding-top: 20px;
 					}
 				}
 			}
