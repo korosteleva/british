@@ -34,7 +34,7 @@ h2 {
 		height: 1px;
 		background: $british_gold;
 		position: absolute;
-		bottom: -40px;
+		bottom: -20px;
 		left: 0;
 	}
 
@@ -45,7 +45,7 @@ h2 {
 
 		&:after {
 			width: 100px;
-			bottom: -26px;
+			bottom: -10px;
 		}
 	}
 
@@ -59,6 +59,7 @@ h2 {
 	font-size: 15px;
 	line-height: 1.7;
 	margin-bottom: 15px;
+	color: $british_gray_dark;
 
 	@media (max-width: $screen-xs-max) {
 		font-size: 13px;
@@ -80,22 +81,24 @@ h2 {
 	}
 
 	&-title {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		color: #ffffff;
-		font-family: 'Open Sans', sans-serif;
-		font-size: 13px;
-		line-height: 1.4;
-		background: url('../images/block-image-bg.png') rgba(0, 36, 125, .8) no-repeat 20px 50%;
-		padding: 12px 20px 12px 64px;
-
+		&:not(:empty) {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			color: #ffffff;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 13px;
+			line-height: 1.4;
+			background: url('../images/block-image-bg.png') rgba(0, 36, 125, .8) no-repeat 20px 50%;
+			padding: 12px 20px 12px 64px;
+		}
 
 	}
 }
 
 
-.language-switcher-locale-url {
+.language-switcher-locale-url,
+.link-wrapper {
 	display: none;
 }

@@ -29,6 +29,12 @@
 	}
 
 	.field-type-text-with-summary {
-		text-align: justify;
+		p {
+			text-align: justify !important;
+		}
+	}
+
+	.link-wrapper {
+		display: none;
 	}
 }

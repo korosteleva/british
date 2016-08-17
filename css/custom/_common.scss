@@ -75,6 +75,18 @@ body {
 		&:hover {
 			text-decoration: none;
 		}
+
+		&:focus,
+		&:active {
+			color: $british_gold;
+		}
+
+		&.active {
+			&:focus,
+			&:active {
+				color: $british_gray_dark;
+			}
+		}
 	}
 
 

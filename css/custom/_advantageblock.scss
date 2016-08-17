@@ -299,3 +299,26 @@
 		}
 	}
 }
+
+// single advantage page
+.node-advantage {
+	.field-name-field-cover {
+		img {
+			width: 100%;
+			height: auto;
+		}
+		margin-bottom: 45px;
+	}
+
+	.field-type-text-with-summary {
+		p {
+			text-align: justify !important;
+		}
+
+	}
+
+	.link-wrapper {
+		display: none;
+	}
+
+}

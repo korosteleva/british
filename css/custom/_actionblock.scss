@@ -41,6 +41,11 @@
 			background: url(../images/action-block-btn.png) $british_gold no-repeat 20px 50%;
 			color: $british_gray_dark;
 			padding-left: 50px;
+
+			&:hover {
+				background-color: #ffffff;
+				border-color: #ffffff;
+			}
 		}
 	}
 
