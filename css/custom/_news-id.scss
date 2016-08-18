@@ -1,11 +1,12 @@
 .node-news {
 	.field-type-datetime,
-	.field-name-field-news-category a {
+	.field-name-field-news-category {
 		font-size: 18px;
 		line-height: 36px;
 		color: #cccccc;
 		font-family: 'PT Serif', serif;
-		float: left
+		float: left;
+		margin-bottom: 15px;
 	}
 
 	.field-type-datetime {

@@ -79,12 +79,14 @@ body {
 		&:focus,
 		&:active {
 			color: $british_gold;
+			background: transparent;
 		}
 
 		&.active {
 			&:focus,
 			&:active {
 				color: $british_gray_dark;
+				background: $british_gold;
 			}
 		}
 	}
