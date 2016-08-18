@@ -4,7 +4,10 @@
     var languageSelector = $('.language-switcher-locale-url'),
         isRuAvailable = languageSelector.find('li.ru a'),
         isEngAvailable = languageSelector.find('li.en a'),
-        activeLanguageHolder, activeLanguage;
+        activeLanguageHolder, activeLanguage,
+
+        linkRu, linkEng,
+        customLangBlock = $('.js-lang-block');
 
     activeLanguageHolder = languageSelector.find('li.active a');
     if (!activeLanguageHolder) {
@@ -23,10 +26,16 @@
       window.location.href = '/eng';
     }
 
-    console.log('active lang', activeLanguage);
-    if (activeLanguage) {
-      $('.js-lang-block').find('a[data-lang='+activeLanguage+']').addClass('active');
-    }
+    linkRu = isRuAvailable ? isRuAvailable.attr('href') : '/ru';
+    linkEng = isEngAvailable ? isEngAvailable.attr('href') : '/eng';
+
+    console.log(linkRu);
+    console.log(linkEng);
+
+    customLangBlock.find('a[data-lang="ru"]').attr('href', linkRu);
+    customLangBlock.find('a[data-lang="en"]').attr('href', linkEng);
+
+    customLangBlock.find('a[data-lang='+activeLanguage+']').addClass('active');
 
   });
 
