@@ -1,0 +1,159 @@
+.contacts-address {
+	text-align: center;
+	margin-bottom: 20px;
+	&:after {
+		content: none;
+	}
+}
+
+.contacts-phone {
+	text-align: center;
+	position: relative;
+	margin-bottom: 25px !important;
+
+	&:after {
+		content: '';
+		width: 200px;
+		max-width: 100%;
+		height: 1px;
+		background: $british_gold;
+		position: absolute;
+		bottom: -26px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	a {
+
+		font-family: 'PT Serif', serif;
+		font-size: 24px;
+		line-height: 36px;
+		color: $british_gray_dark;
+		text-decoration: none;
+		letter-spacing: .8px;
+	}
+}
+
+.contacts-map_wrapper {
+	position: relative;
+}
+
+#contacts-map_wrapper {
+	height: 500px;
+}
+
+#block-block-13 {
+	position: absolute;
+	left: 200px;
+	top: 100px;
+	z-index: 5;
+
+	.contacts-info {
+		background: #ffffff;
+		padding: 44px 40px 40px 74px;
+		width: 300px;
+		height: 300px;
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: auto;
+			right: 0;
+			top: 0;
+
+			width: 0;
+			height: 0;
+			border-top: 150px solid transparent;
+			border-left: 50px solid #ffffff;
+			border-bottom: 150px solid transparent;
+			transform: translateX(100%);
+		}
+
+		&-element {
+			padding-top: 20px;
+
+			&:first-child {
+				padding-top: 0;
+			}
+
+			&_label {
+				color: #cccccc;
+				font-family: 'PT Serif', serif;
+				font-size: 16px;
+				line-height: 24px;
+				position: relative;
+
+				&:after {
+					content: '';
+					position: absolute;
+					width: 25px;
+					height: 25px;
+					left: -8px;
+					top: -1px;
+					transform: translateX(-100%);
+				}
+
+				// phone
+				&._phone {
+					&:after {
+						background: url("../images/contacts-phone.png") transparent no-repeat 50% 50%;
+						background-size: cover;
+					}
+
+				}
+				// email
+				&._email {
+					&:after {
+						background: url("../images/contacts-email.png") transparent no-repeat 50% 50%;
+						background-size: cover;
+					}
+				}
+				// address
+				&._address {
+					&:after {
+						background: url("../images/contacts-address.png") transparent no-repeat 50% 50%;
+						background-size: cover;
+					}
+				}
+			}
+
+			&_descr {
+				a {
+					color: $british_gray_dark;
+				}
+				color: $british_gray_dark;
+				font-family: 'PT Serif', serif;
+				font-size: 16px;
+				line-height: 23px;
+			}
+		}
+	}
+
+
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		left: 80px;
+
+		.contacts-info {
+			&:after {
+				content: none;
+			}
+		}
+
+	}
+	@media (max-width: $screen-xs-max) {
+		position: relative;
+		top: 0;
+		left: 0;
+
+		.contacts-info {
+			width: 100%;
+			height: auto;
+			padding: 20px 20px 50px 50px;
+
+			&:after {
+				content: none;
+			}
+		}
+	}
+}

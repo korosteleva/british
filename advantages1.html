@@ -8,6 +8,46 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
+
+<!--<div class="contacts-info">-->
+	<!--<div class="contacts-info-element">-->
+		<!--<div class="contacts-info-element_label">Телефон</div>-->
+		<!--<div class="contacts-info-element_descr"><a href="tel:84954343311">+7 (495) 434-33-11</a></div>-->
+	<!--</div>-->
+	<!--<div class="contacts-info-element">-->
+		<!--<div class="contacts-info-element_label">E-mail</div>-->
+		<!--<div class="contacts-info-element_descr"><a href="mailto:britishlyceum@yandex.ru">britishlyceum@yandex.ru</a></div>-->
+	<!--</div>-->
+	<!--<div class="contacts-info-element">-->
+		<!--<div class="contacts-info-element_label">Адрес</div>-->
+		<!--<div class="contacts-info-element_descr">г. Москва, ул. Верхняя Красносельская 14а</div>-->
+	<!--</div>-->
+<!--</div>-->
+
+<div class="contacts-map_wrapper">
+	<div id="contacts-map_wrapper"></div>
+</div>
+<script type="text/javascript">
+	(function ($) {
+
+		ymaps.ready(initMap);
+		var myMap;
+		function initMap() {
+
+			myMap = new ymaps.Map("contacts-map_wrapper", {
+				center: [55.78, 37.66],
+				zoom: 13
+			});
+			myMap.behaviors.disable('scrollZoom');
+			myMap.behaviors.disable('multiTouch');
+
+			if ('ontouchstart' in window || !!(navigator.msMaxTouchPoints)) {
+				myMap.behaviors.disable('drag');
+			}
+		}
+	}(jQuery));
+</script>
+
 <div id="page-wrapper">
 	<div id="block-block-8" class="block block-block contextual-links-region">
 		<h2>Британский лицей лингвистической школы</h2>
