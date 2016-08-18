@@ -214,6 +214,19 @@
 					$advBlock.find('.views-row').addClass('media-block_full-width');
 					$advBlock.find('.views-field-view-node a').addClass('btn').addClass('btn-main').addClass('_dark-color');
 
+					var innerImg;
+					$advBlock.find('.advantage_img').each(function (index, element) {
+						innerImg = $(element).find('img');
+
+						$(element).css({
+							'background-image': 'url("' + innerImg.attr('src') + '")'
+						});
+
+						innerImg.remove();
+
+					});
+
+
 					var $showMoreAdvantages = $('.advantages-show-more').find('a');
 					if ($showMoreAdvantages) {
 						$showMoreAdvantages.on('click', function (evt) {

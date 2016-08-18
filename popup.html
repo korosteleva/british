@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,cyrillic-ext,cyrillic'
+	      rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet'
+	      type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic,cyrillic-ext'
+	      rel='stylesheet' type='text/css'>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/_script.js"></script>
+
+
+	<style type="text/css">
+
+		@import url("http://tsm.4each.ru/modules/system/system.base.css?oc2dfb");
+		@import url("http://tsm.4each.ru/modules/system/system.menus.css?oc2dfb");
+		@import url("http://tsm.4each.ru/modules/system/system.messages.css?oc2dfb");
+		@import url("http://tsm.4each.ru/modules/system/system.theme.css?oc2dfb");
+
+		@import url("http://tsm.4each.ru/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.core.min.css?oc2dfb");
+		@import url("http://tsm.4each.ru/sites/all/modules/jquery_update/replace/ui/themes/base/minified/jquery.ui.theme.min.css?oc2dfb");
+		@import url("http://tsm.4each.ru/modules/overlay/overlay-parent.css?oc2dfb");
+		@import url("http://tsm.4each.ru/modules/contextual/contextual.css?oc2dfb");
+
+
+		@import url("http://tsm.4each.ru/sites/all/modules/date/date_api/date.css?oc2dfb");
+		@import url("http://tsm.4each.ru/sites/all/modules/date/date_popup/themes/datepicker.1.7.css?oc2dfb");
+		@import url("http://tsm.4each.ru/modules/field/theme/field.css?oc2dfb");
+		@import url("http://tsm.4each.ru/modules/node/node.css?oc2dfb");
+		@import url("http://tsm.4each.ru/modules/user/user.css?oc2dfb");
+		@import url("http://tsm.4each.ru/sites/all/modules/youtube/css/youtube.css?oc2dfb");
+		@import url("http://tsm.4each.ru/sites/all/modules/views/css/views.css?oc2dfb");
+
+		@import url("http://tsm.4each.ru/sites/all/modules/colorbox/styles/default/colorbox_style.css?oc2dfb");
+		@import url("http://tsm.4each.ru/sites/all/modules/ctools/css/ctools.css?oc2dfb");
+		@import url("http://tsm.4each.ru/modules/locale/locale.css?oc2dfb");
+		@import url("http://tsm.4each.ru/sites/all/modules/webform/css/webform.css?oc2dfb");
+		@import url("http://tsm.4each.ru/modules/shortcut/shortcut.css?oc2dfb");
+		@import url("http://tsm.4each.ru/modules/toolbar/toolbar.css?oc2dfb");
+
+		@import url("http://tsm.4each.ru/sites/all/themes/tsm/css/layout.css?oc2dfb");
+		@import url("http://tsm.4each.ru/sites/all/themes/tsm/css/style.css?oc2dfb");
+		@import url("http://tsm.4each.ru/sites/all/themes/tsm/css/colors.css?oc2dfb");
+		@import url("css/style.min.css?oc2dfb");
+
+	</style>
+
+
+</head>
+<body>
+
+<div id="cboxOverlay" style="opacity: 0.85; cursor: pointer; visibility: visible;"></div>
+
+<div id="colorbox" class="" role="dialog" tabindex="-1"
+     style="display: block; visibility: visible; top: 50px; left: 463px; position: absolute; width: 530px; height: 476px;">
+	<div id="cboxWrapper" style="height: 476px; width: 530px;">
+		<div>
+			<div id="cboxTopLeft" style="float: left;"></div>
+			<div id="cboxTopCenter" style="float: left; width: 500px;"></div>
+			<div id="cboxTopRight" style="float: left;"></div>
+		</div>
+		<div style="clear: left;">
+			<div id="cboxMiddleLeft" style="float: left; height: 451px;"></div>
+			<div id="cboxContent" style="float: left; width: 500px; height: 451px;">
+				<div id="cboxLoadedContent" style="width: 500px; overflow: auto; height: 423px;">
+					<form class="webform-client-form webform-client-form-114" enctype="multipart/form-data" action="/ru"
+					      method="post" id="webform-client-form-114" accept-charset="UTF-8">
+						<div>
+							<div class="form-item webform-component webform-component-textfield webform-component--kak-k-vam-obrashchatsya">
+								<label class="element-invisible" for="edit-submitted-kak-k-vam-obrashchatsya">Как к вам
+									обращаться <span class="form-required" title="Это поле обязательно для заполнения.">*</span></label>
+								<input required="required" placeholder="Как к вам обращаться" type="text"
+								       id="edit-submitted-kak-k-vam-obrashchatsya"
+								       name="submitted[kak_k_vam_obrashchatsya]" value="" size="60" maxlength="128"
+								       class="form-text required">
+							</div>
+							<div class="form-item webform-component webform-component-textfield webform-component--vash-kontaktnyy-e-mail">
+								<label class="element-invisible" for="edit-submitted-vash-kontaktnyy-e-mail">Ваш
+									контактный e-mail <span class="form-required"
+									                        title="Это поле обязательно для заполнения.">*</span></label>
+								<input required="required" placeholder="Ваш контактный e-mail" type="text"
+								       id="edit-submitted-vash-kontaktnyy-e-mail"
+								       name="submitted[vash_kontaktnyy_e_mail]" value="" size="60" maxlength="128"
+								       class="form-text required">
+							</div>
+							<div class="form-item webform-component webform-component-textarea webform-component--tekst-soobshcheniya">
+								<label class="element-invisible" for="edit-submitted-tekst-soobshcheniya">Текст
+									сообщения <span class="form-required"
+									                title="Это поле обязательно для заполнения.">*</span></label>
+
+								<div class="form-textarea-wrapper"><textarea required="required"
+								                                             placeholder="Текст сообщения"
+								                                             id="edit-submitted-tekst-soobshcheniya"
+								                                             name="submitted[tekst_soobshcheniya]"
+								                                             cols="60" rows="4"
+								                                             class="form-textarea required"></textarea>
+								</div>
+							</div>
+							<input type="hidden" name="details[sid]">
+							<input type="hidden" name="details[page_num]" value="1">
+							<input type="hidden" name="details[page_count]" value="1">
+							<input type="hidden" name="details[finished]" value="0">
+							<input type="hidden" name="form_build_id"
+							       value="form-DIgA4OBzSx4NU0a5VVcOcHA9wxXV7E0xY7jOdLoc6BA">
+							<input type="hidden" name="form_token" value="Lk6ScSFmc2r9Y2K87m29PphpCASHOWwXfsxEBWYA2pE">
+							<input type="hidden" name="form_id" value="webform_client_form_114">
+
+							<div class="form-actions"><input class="webform-submit button-primary form-submit btn"
+							                                 type="submit" name="op" value="Отправить сообщение"></div>
+						</div>
+					</form>
+				</div>
+				<div id="cboxTitle" style="float: left; display: none;"></div>
+				<div id="cboxCurrent" style="float: left; display: none;"></div>
+				<button type="button" id="cboxPrevious" style="display: none;"></button>
+				<button type="button" id="cboxNext" style="display: none;"></button>
+				<button type="button" id="cboxSlideshow" style="display: none;"></button>
+				<div id="cboxLoadingOverlay" style="float: left; display: none;"></div>
+				<div id="cboxLoadingGraphic" style="float: left; display: none;"></div>
+				<button type="button" id="cboxClose">Закрыть</button>
+			</div>
+			<div id="cboxMiddleRight" style="float: left; height: 451px;"></div>
+		</div>
+		<div style="clear: left;">
+			<div id="cboxBottomLeft" style="float: left;"></div>
+			<div id="cboxBottomCenter" style="float: left; width: 500px;"></div>
+			<div id="cboxBottomRight" style="float: left;"></div>
+		</div>
+	</div>
+	<div style="position: absolute; width: 9999px; visibility: hidden; max-width: none; display: none;"></div>
+</div>
+</body>
+</html>

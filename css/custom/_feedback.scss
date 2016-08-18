@@ -39,7 +39,9 @@
 }
 
 // map and form
-#block-block-10 {
+#block-block-10,
+#colorbox,
+#node-114 {
 	.feedback-form-wrapper {
 		display: flex;
 		flex-wrap: wrap;
@@ -87,47 +89,6 @@
 
 		}
 
-		form {
-			box-sizing: border-box;
-			position: relative;
-			width: 400px;
-			padding: 48px 0;
-
-			label {
-				display: none;
-				position: relative;
-			}
-
-			input[type=text],
-			textarea {
-				font-family: 'PT Serif', serif;
-				font-size: 15px;
-				color: #ffffff;
-				position: relative;
-				background: rgba(0, 0, 0, .3);
-				border: none;
-				border-bottom: 1px solid $british_gold;
-				margin: 10px 0;
-				width: 100%;
-				padding: 14px 22px;
-				border-radius: 0;
-
-				&::-webkit-input-placeholder {color:#ffffff;}
-				&::-moz-placeholder          {color:#ffffff;}
-				&:-moz-placeholder           {color:#ffffff;}
-				&:-ms-input-placeholder      {color:#ffffff;}
-
-				&:focus {
-					outline: none;
-				}
-			}
-
-			textarea {
-				resize: none;
-				height: 160px;
-			}
-		}
-
 		.form-actions {
 			text-align: center;
 			padding-top: 16px;
@@ -143,7 +104,41 @@
 				}
 			}
 		}
+	}
 
+	form {
+		box-sizing: border-box;
+		position: relative;
+		width: 400px;
+		padding: 48px 0;
+
+		label {
+			display: none;
+			position: relative;
+		}
+
+		input[type=text],
+		textarea {
+			font-family: 'PT Serif', serif;
+			font-size: 15px;
+			color: #ffffff;
+			position: relative;
+			background: rgba(0, 0, 0, .3);
+			border: none;
+			border-bottom: 1px solid $british_gold;
+			margin: 10px 0;
+			width: 100%;
+			padding: 14px 22px;
+			border-radius: 0;
+			&:focus {
+				outline: none;
+			}
+		}
+
+		textarea {
+			resize: none;
+			height: 160px;
+		}
 	}
 
 	@media (max-width: $screen-sm-max) {
@@ -160,7 +155,7 @@
 				}
 			}
 
-			form {
+			#webform-client-form-114 {
 				margin: 0 auto;
 				padding-top: 25px;
 				padding-bottom: 51px;
@@ -182,21 +177,35 @@
 	}
 
 	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-		.form-wrapper {
-			form {
-				width: 400px;
-			}
+		form {
+			width: 400px;
 		}
 	}
 	@media (max-width: $screen-xs-max) {
-		.form-wrapper {
-			form {
-				width: 300px;
-			}
+		form {
+			width: 300px;
 		}
 	}
 
 	#british_map {
 		min-height: 400px;
+	}
+}
+
+#colorbox,
+#node-114 {
+	form {
+		padding: 20px 0 0;
+		margin: 0 auto;
+
+		input[type=text],
+		textarea {
+			color: #777777;
+			background: rgba(0, 0, 0, .05);
+
+		}
+	}
+	.form-actions {
+		text-align: center;
 	}
 }

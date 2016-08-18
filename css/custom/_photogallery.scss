@@ -1,6 +1,6 @@
 .view-id-gallery {
 
-	.view-content {
+	> .view-content {
 		display: flex;
 		flex-wrap: wrap;
 	}
@@ -48,6 +48,13 @@
 			line-height: 28px;
 			font-family: 'PT Serif', serif;
 			letter-spacing: 0.5px;
+			text-decoration: none;
+
+			&:hover {
+				color: $british_gold;
+				text-decoration: none;
+			}
+
 		}
 	}
 
@@ -101,7 +108,9 @@
 		img {
 			box-sizing: border-box;
 			width: 350px;
+			max-width: 100%;
 			padding: 1px 0;
+			height: auto;
 		}
 	}
 

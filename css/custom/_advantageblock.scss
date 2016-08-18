@@ -1,19 +1,20 @@
 .media-block {
 
-	$blockHeight: 480px;
-	height: $blockHeight;
+	min-height: 480px;
 	display: flex;
 
 	.advantage_img  {
 		padding: 0;
-		img {
-			width: 100% !important;
-			height: $blockHeight !important;
-		}
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+		height: auto;
+		min-height: 220px;
 	}
 
 	.advantage_text {
 		padding-top: 50px;
+		padding-bottom: 50px;
 	}
 
 	.views-field-title {
@@ -62,17 +63,11 @@
 	}
 
 	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-		$blockHeight: 400px;
+
 		$blochSidePadding: 30px;
 
-		height: $blockHeight;
+		min-height: 400px;
 
-		.advantage_img {
-			img {
-				height: $blockHeight !important;
-			}
-
-		}
 
 		.views-field-field-teaser {
 			height: 155px;
@@ -97,6 +92,7 @@
 
 		.advantage_text {
 			padding-top: 30px;
+			padding-bottom: 0;
 		}
 
 		&:nth-child(even),
@@ -104,13 +100,6 @@
 			.media-block_img {
 				order: -1;
 			}
-		}
-
-		.advantage_img {
-			img {
-				height: 220px !important;
-			}
-
 		}
 
 		&_content {
