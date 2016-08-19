@@ -10,6 +10,20 @@
 		.view-gallery-wrapper {
 			position: relative;
 			box-shadow: 2px 2px 20px 1px #eeeeee;
+
+			&:hover {
+				box-shadow: 2px 2px 20px 1px #aaaaaa;
+
+				.views-field-field-cover {
+					a {
+						img {
+							-webkit-backface-visibility: hidden;
+							-webkit-transform: translateZ(0) scale(1.1, 1.1);
+							transform: translateZ(0) scale(1.1, 1.1);
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -25,6 +39,7 @@
 			img {
 				width: 100%;
 				height: $imageHeight;
+				transition: all 1.2s ease-in-out;
 			}
 
 			&:after {

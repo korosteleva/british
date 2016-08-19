@@ -11,6 +11,21 @@
 	input[type="text"] {
 		padding: 14px 22px;
 	}
+
+	.search-advanced {
+		margin: 15px 0;
+		> legend {
+			margin-bottom: 15px;
+		}
+		.fieldset-wrapper {
+			.criterion {
+				margin-top: 2em;
+			}
+		}
+		input.form-submit {
+			margin-left: 0;
+		}
+	}
 }
 
 ol.search-results {

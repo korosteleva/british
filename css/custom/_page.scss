@@ -67,9 +67,9 @@ h2 {
 	}
 }
 
-#page-wrapper ul, #page-wrapper ol,
-.page-wrapper ul, .page-wrapper ol {
-
+#page-wrapper .view-empty,
+.page-wrapper .view-empty {
+	text-align: center;
 }
 
 .block-image {
