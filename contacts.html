@@ -53,6 +53,7 @@
 <div class="page-wrapper">
 	<div class="container page-block">
 		<a id="main-content"></a>
+
 		<div class="region region-content">
 			<div id="block-system-main" class="block block-system">
 				<div class="content">
@@ -81,10 +82,28 @@
 				<div id="block-block-13" class="block block-block contextual-links-region">
 
 					<div class="content">
+
+						<div class="contacts-info">
+							<div class="contacts-info-element">
+								<div class="contacts-info-element_label _phone">Phone</div>
+								<div class="contacts-info-element_descr"><a href="tel:84954343311">+7 (495) 434-33-11</a></div>
+							</div>
+							<div class="contacts-info-element">
+								<div class="contacts-info-element_label _email">E-mail</div>
+								<div class="contacts-info-element_descr"><a href="mailto:britishlyceum@yandex.ru">britishlyceum@yandex.ru</a>
+								</div>
+							</div>
+							<div class="contacts-info-element">
+								<div class="contacts-info-element_label _address">Address</div>
+								<div class="contacts-info-element_descr"> 14a Verkhnyaya Krasnoselskaya Street, Moscow</div>
+							</div>
+						</div>
+
 						<div class="contacts-info">
 							<div class="contacts-info-element">
 								<div class="contacts-info-element_label _phone">Телефон</div>
-								<div class="contacts-info-element_descr"><a href="tel:84954343311">+7 (495) 434-33-11</a></div>
+								<div class="contacts-info-element_descr"><a href="tel:84954343311">+7 (495)
+									434-33-11</a></div>
 							</div>
 							<div class="contacts-info-element">
 								<div class="contacts-info-element_label _email">E-mail</div>
@@ -102,7 +121,7 @@
 
 				<div id="block-block-12" class="block block-block contextual-links-region">
 					<div class="content">
-						<script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+						<script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=en_US"></script>
 						<div class="contacts-map_wrapper">
 							<div id="contacts-map_wrapper"></div>
 						</div>
@@ -111,10 +130,11 @@
 
 								ymaps.ready(initMap);
 								var myMap;
+
 								function initMap() {
 
 									myMap = new ymaps.Map("contacts-map_wrapper", {
-										center: [55.78331627708318,37.661005500000016],
+										center: [55.78331627708318, 37.661005500000016],
 										zoom: 13
 									});
 									myMap.behaviors.disable('scrollZoom');
@@ -129,10 +149,9 @@
 									myMap.controls.remove('typeSelector');
 
 
-									var myPlacemark = new ymaps.Placemark([55.78331627708318,37.661005500000016]);
+									var myPlacemark = new ymaps.Placemark([55.78331627708318, 37.661005500000016]);
 									myMap.geoObjects.add(myPlacemark);
 								}
-
 
 
 								$('.contacts-map_wrapper').prepend($('#block-block-13'));

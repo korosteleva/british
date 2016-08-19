@@ -186,7 +186,7 @@ header {
 	&.no-swiper {
 		padding-top: 280px;
 		height: auto;
-		background: url("../images/header-noswiper.jpg") transparent no-repeat 50% 50%;
+		background: url("../images/header-noswiper.jpg") transparent no-repeat 50% 0;
 		background-size: cover;
 
 		&:before {
@@ -199,7 +199,6 @@ header {
 			background: rgba(0, 0, 0, .5);
 		}
 
-		// todo move h1 to typography style
 		h1 {
 			text-transform: uppercase;
 			position: relative;

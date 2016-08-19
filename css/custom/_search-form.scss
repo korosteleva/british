@@ -1,0 +1,33 @@
+.search-form {
+	label {
+		font-size: 1em;
+		padding-right: 10px;
+	}
+
+	input.form-submit {
+		margin-left: 25px;
+	}
+
+	input[type="text"] {
+		padding: 14px 22px;
+	}
+}
+
+ol.search-results {
+	padding-left: 0;
+
+	li {
+		margin-bottom: 1.8em;
+
+		.title {
+			a {
+				color: $british_gray_dark;
+			}
+		}
+
+		.search-info {
+			color: #cccccc;
+		}
+	}
+}
+
