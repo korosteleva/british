@@ -26,6 +26,11 @@
 		&:hover {
 			text-decoration: none;
 		}
+		a {
+			&:hover {
+				text-decoration: none;
+			}
+		}
 
 		img {
 			width: 90px;

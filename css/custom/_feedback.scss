@@ -45,6 +45,10 @@
 	.feedback-form-wrapper {
 		display: flex;
 		flex-wrap: wrap;
+		&:before,
+		&:after {
+			content: none;
+		}
 	}
 	.map-wrapper,
 	.form-wrapper {

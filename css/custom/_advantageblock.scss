@@ -58,7 +58,7 @@
 
 		.views-field-view-node {
 			padding-left: $blochSidePadding;
-			padding-right: $blochSidePadding;
+			padding-right: 0;
 		}
 	}
 
@@ -83,7 +83,7 @@
 
 		.views-field-view-node {
 			padding-left: $blochSidePadding;
-			padding-right: $blochSidePadding;
+			padding-right: 0;
 		}
 
 	}
@@ -148,8 +148,7 @@
 .media-block_full-width {
 
 	.views-field-title,
-	.views-field-field-teaser,
-	.views-field-view-node {
+	.views-field-field-teaser {
 		box-sizing: border-box;
 
 		$deltaWidth: 30px;
@@ -171,15 +170,65 @@
 		}
 	}
 
-	&:nth-of-type(even) {
-		.views-field-title,
-		.views-field-field-teaser,
-		.views-field-view-node {
-			margin-right: 0;
-			margin-left: auto;
-			box-sizing: border-box;
+	.views-field-view-node,
+	.views-field-current-lang {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.views-field-current-lang {
+		margin: 0 25px;
+		$langElementSize: 40px;
+
+		a {
+			display: inline-block;
+			width: $langElementSize;
+			height: $langElementSize;
+			font-size: 13px;
+			line-height: $langElementSize;
+			border-radius: 50%;
+			border: 1px solid $british_gold;
+			padding: 0;
+			box-shadow: none;
+			color: $british_gray_dark;
+			transition: color 0.3s, background 0.3s;
+			text-align: center;
+			text-transform: uppercase;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:hover {
+				text-decoration: none;
+				background: $british_gold;
+			}
+
+			&:focus,
+			&:active {
+				color: $british_gray_dark;
+				background: transparent;
+			}
+
+			&.active {
+				&:focus,
+				&:active {
+					color: $british_gray_dark;
+					background: $british_gold;
+				}
+			}
 		}
 	}
+
+	//&:nth-of-type(even) {
+	//	.views-field-title,
+	//	.views-field-field-teaser,
+	//	.views-field-view-node {
+	//		margin-right: 0;
+	//		margin-left: auto;
+	//		box-sizing: border-box;
+	//	}
+	//}
 
 
 	display: none;

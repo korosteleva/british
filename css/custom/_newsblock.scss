@@ -33,6 +33,11 @@
 	> .view-content {
 		display: flex;
 		flex-wrap: wrap;
+
+		&:before,
+		&:after {
+			content: none;
+		}
 	}
 
 	h2 {
