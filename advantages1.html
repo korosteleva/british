@@ -28,24 +28,24 @@
 	<div id="contacts-map_wrapper"></div>
 </div>
 <script type="text/javascript">
-	(function ($) {
+//	(function ($) {
 
-		ymaps.ready(initMap);
-		var myMap;
-		function initMap() {
-
-			myMap = new ymaps.Map("contacts-map_wrapper", {
-				center: [55.78, 37.66],
-				zoom: 13
-			});
-			myMap.behaviors.disable('scrollZoom');
-			myMap.behaviors.disable('multiTouch');
-
-			if ('ontouchstart' in window || !!(navigator.msMaxTouchPoints)) {
-				myMap.behaviors.disable('drag');
-			}
-		}
-	}(jQuery));
+//		ymaps.ready(initMap);
+//		var myMap;
+//		function initMap() {
+//
+//			myMap = new ymaps.Map("contacts-map_wrapper", {
+//				center: [55.78, 37.66],
+//				zoom: 13
+//			});
+//			myMap.behaviors.disable('scrollZoom');
+//			myMap.behaviors.disable('multiTouch');
+//
+//			if ('ontouchstart' in window || !!(navigator.msMaxTouchPoints)) {
+//				myMap.behaviors.disable('drag');
+//			}
+//		}
+//	}(jQuery));
 </script>
 
 <div id="page-wrapper">
@@ -251,7 +251,21 @@
 			<script type="text/javascript">
 				(function ($) {
 					var $advBlock = $('.view-id-advantage');
-					$advBlock.find('.views-row').addClass('media-block_full-width');
+
+					var $avdWrapper;
+					$advBlock.find('.views-row').each(function (index, element) {
+
+						$(element).addClass('media-block_full-width');
+
+						$avdWrapper = $('<div/>', {
+							class: 'advantage-wrapper'
+						});
+
+						$avdWrapper.html($(element).find('.advantage_text').html());
+						$(element).find('.advantage_text').empty().append($avdWrapper);
+					});
+
+
 					$advBlock.find('.views-field-view-node a').addClass('btn').addClass('btn-main').addClass('_dark-color');
 
 					var innerImg;

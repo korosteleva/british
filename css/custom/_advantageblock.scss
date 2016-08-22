@@ -37,6 +37,7 @@
 	}
 
 	.views-field-view-node {
+		padding-right: 0;
 		.lang-block {
 			display: inline-block;
 			margin-left: 6px;
@@ -46,19 +47,10 @@
 	@media (min-width: $screen-md-min) {
 
 		$blochSidePadding: 60px;
-		.views-field-field-teaser {
+
+		.advantage-wrapper {
 			padding-left: $blochSidePadding;
 			padding-right: $blochSidePadding;
-		}
-
-		.views-field-title {
-			padding-left: $blochSidePadding;
-			padding-right: $blochSidePadding;
-		}
-
-		.views-field-view-node {
-			padding-left: $blochSidePadding;
-			padding-right: 0;
 		}
 	}
 
@@ -67,25 +59,15 @@
 		$blochSidePadding: 30px;
 
 		min-height: 400px;
-
+		.advantage-wrapper {
+			padding-left: $blochSidePadding;
+			padding-right: $blochSidePadding;
+		}
 
 		.views-field-field-teaser {
 			height: 155px;
 			margin-bottom: 20px;
-			padding-left: $blochSidePadding;
-			padding-right: $blochSidePadding;
 		}
-
-		.views-field-title {
-			padding-left: $blochSidePadding;
-			padding-right: $blochSidePadding;
-		}
-
-		.views-field-view-node {
-			padding-left: $blochSidePadding;
-			padding-right: 0;
-		}
-
 	}
 
 	@media (max-width: $screen-xs-max) {
@@ -147,8 +129,7 @@
 
 .media-block_full-width {
 
-	.views-field-title,
-	.views-field-field-teaser {
+	.advantage-wrapper {
 		box-sizing: border-box;
 
 		$deltaWidth: 30px;
@@ -220,15 +201,13 @@
 		}
 	}
 
-	//&:nth-of-type(even) {
-	//	.views-field-title,
-	//	.views-field-field-teaser,
-	//	.views-field-view-node {
-	//		margin-right: 0;
-	//		margin-left: auto;
-	//		box-sizing: border-box;
-	//	}
-	//}
+	&:nth-of-type(even) {
+		.advantage-wrapper {
+			margin-right: 0;
+			margin-left: auto;
+			box-sizing: border-box;
+		}
+	}
 
 
 	display: none;
