@@ -1,0 +1,54 @@
+.view-comments {
+	.views-row {
+		position: relative;
+		padding-left: 75px;
+		margin: 35px 0;
+		&:before {
+			content: '';
+			position: absolute;
+			background: url('../images/comments-user.png') no-repeat 50% 50%;
+			width: 55px;
+			height: 55px;
+			left: 0;
+			top: 0;
+		}
+
+		.views-field-value,
+		.views-field-modified {
+			font-family: "PT Serif", serif;
+			color: $british_gray_dark;
+			font-size: 14px;
+			line-height: 22px;
+			float: left;
+			padding-top: 3px;
+			letter-spacing: .5px;
+			&:before,
+			&:after {
+				content: '';
+				clear: both;
+				display: table;
+			}
+		}
+
+		.views-field-value {
+			color: $british_gray_dark;
+			margin-right: 10px;
+		}
+		.views-field-modified {
+			color: #cccccc;
+		}
+
+		.views-field-value-1 {
+			padding-top: 33px;
+			font-family: "Open Sans", sans-serif;
+			font-size: 13px;
+			line-height: 22px;
+			&:before,
+			&:after {
+				content: '';
+				clear: both;
+				display: table;
+			}
+		}
+	}
+}
