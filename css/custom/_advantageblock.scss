@@ -152,13 +152,15 @@
 	}
 
 	.views-field-view-node,
-	.views-field-current-lang {
+	.views-field-current-lang,
+	.views-field-nid {
 		display: inline-block;
 		vertical-align: middle;
 	}
 
-	.views-field-current-lang {
-		margin: 0 25px;
+	.views-field-current-lang,
+	.views-field-nid {
+		margin: 0 5px;
 		$langElementSize: 40px;
 
 		a {
@@ -198,6 +200,13 @@
 					background: $british_gold;
 				}
 			}
+		}
+	}
+
+	.views-field-current-lang {
+		margin-left: 25px;
+		a {
+			background: $british_gold;
 		}
 	}
 

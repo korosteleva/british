@@ -1,5 +1,6 @@
 // text
-#block-block-9 {
+#block-block-9,
+#block-block-22 {
 	text-align: center;
 	padding-top: 70px;
 	padding-bottom: 56px;
@@ -77,6 +78,12 @@
 			display: none;
 		}
 
+		input[type="text"],
+		textarea {
+			background: rgba(0, 0, 0, .3);
+			color: #ffffff
+		}
+
 
 		.content {
 			position: relative;
@@ -93,56 +100,7 @@
 
 		}
 
-		.form-actions {
-			text-align: center;
-			padding-top: 16px;
 
-			.btn {
-				padding: 16px 20px;
-				background: $british_gold;
-				color: $british_gray_dark;
-
-				&:hover {
-					background: #ffffff;
-					border-color: #ffffff;
-				}
-			}
-		}
-	}
-
-	form {
-		box-sizing: border-box;
-		position: relative;
-		width: 400px;
-		padding: 48px 0;
-
-		label {
-			display: none;
-			position: relative;
-		}
-
-		input[type=text],
-		textarea {
-			font-family: 'PT Serif', serif;
-			font-size: 15px;
-			color: #ffffff;
-			position: relative;
-			background: rgba(0, 0, 0, .3);
-			border: none;
-			border-bottom: 1px solid $british_gold;
-			margin: 10px 0;
-			width: 100%;
-			padding: 14px 22px;
-			border-radius: 0;
-			&:focus {
-				outline: none;
-			}
-		}
-
-		textarea {
-			resize: none;
-			height: 160px;
-		}
 	}
 
 	@media (max-width: $screen-sm-max) {
@@ -169,25 +127,6 @@
 					padding-left: 12px;
 				}
 			}
-
-			.form-actions {
-
-				.btn {
-					padding-top: 11px;
-					padding-bottom: 11px;
-				}
-			}
-		}
-	}
-
-	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-		form {
-			width: 400px;
-		}
-	}
-	@media (max-width: $screen-xs-max) {
-		form {
-			width: 300px;
 		}
 	}
 
@@ -196,8 +135,7 @@
 	}
 }
 
-#colorbox,
-#node-114 {
+#colorbox {
 	form {
 		padding: 20px 0 0;
 		margin: 0 auto;
