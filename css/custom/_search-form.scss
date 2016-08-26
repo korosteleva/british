@@ -7,6 +7,10 @@
 
 	input.form-submit {
 		margin-left: 25px;
+		@media (max-width: $screen-xs-max) {
+			margin-left: 0;
+			margin-top: 10px;
+		}
 	}
 
 	input[type="text"] {
