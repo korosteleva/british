@@ -104,34 +104,13 @@
 
 	.views-field-field-date {
 		float: left;
-		padding-right: 45px;
+		padding-right: 25px;
 		color: #c6c6c6;
 	}
 
-	.views-field-field-date,
-	.comments {
+	.views-field-field-date {
 		font-family: 'Open Sans', sans-serif;
 		font-size: 11px;
-	}
-
-	.comments {
-		float: left;
-		padding: 1px 4px;
-		border-radius: 2px;
-		border: 1px solid $british_gold;
-		position: relative;
-
-		&:after {
-			content: '';
-			position: absolute;
-			width: 0;
-			height: 0;
-			border-top: 6px solid $british_gold;
-			border-right: 10px solid transparent;
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%) translateY(100%);
-		}
 	}
 
 	@media (max-width: $screen-xs-max) {
@@ -159,6 +138,72 @@
 			&:last-of-type {
 				margin-bottom: 33px;
 			}
+		}
+	}
+}
+
+.comments {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 11px;
+	float: left;
+	padding: 1px 8px;
+	border-radius: 2px;
+	border: 1px solid $british_gold;
+	position: relative;
+	margin-top: -2px;
+
+	&:after,
+	&:before {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 0;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%) translateY(100%);
+	}
+	&:after {
+		border-top: 6px solid $british_gold;
+		border-right: 10px solid transparent;
+	}
+	&:before {
+		border-top: 4px solid #ffffff;
+		border-right: 8px solid transparent;
+		z-index: 5;
+	}
+}
+
+#block-block-23 {
+	overflow: hidden;
+	padding: 30px 0;
+	border-top: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+	margin-top: 20px;
+
+	.content {
+		display: flex;
+		align-items: baseline;
+	}
+
+	p {
+		float: left;
+		margin: 0;
+		margin-right: 22px;
+	}
+
+	.comments {
+		margin-top: 0;
+	}
+}
+
+#colorbox {
+	h2 {
+		margin-top: 5px;
+		margin-bottom: 5px;
+		text-align: center;
+
+		&:after {
+			content: none;
 		}
 	}
 }
