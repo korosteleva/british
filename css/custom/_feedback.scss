@@ -31,6 +31,7 @@
 			bottom: -20px;
 			left: 50%;
 			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
 		}
 	}
 
@@ -45,7 +46,9 @@
 #node-114 {
 	.feedback-form-wrapper {
 		display: flex;
+		display: -webkit-flex;
 		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
 		&:before,
 		&:after {
 			content: none;

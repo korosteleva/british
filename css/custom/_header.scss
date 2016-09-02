@@ -53,6 +53,7 @@ header {
 				height: 453px;
 				bottom: 0;
 				transform: translateX(-50%);
+				-webkit-transform: translateX(-50%);
 				margin-left: 50%;
 
 				@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
@@ -75,6 +76,7 @@ header {
 					color: $british_gold;
 					position: absolute;
 					transform: skew(-30deg);
+					-webkit-transform: skew(-30deg);
 				}
 
 				&-shape,

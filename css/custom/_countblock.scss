@@ -46,11 +46,13 @@
 			&:before {
 				left: -18px;
 				transform: translateX(-100%);
+				-webkit-transform: translateX(-100%);
 			}
 			&:after {
 				left: auto;
 				right: -18px;
 				transform: translateX(100%);
+				-webkit-transform: translateX(100%);
 			}
 
 		}

@@ -8,6 +8,7 @@
 		position: absolute;
 		z-index: 100;
 		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
 		margin-left: 50%;
 		top: 215px;
 
@@ -57,6 +58,7 @@
 						top: 100%;
 						left: 0;
 						transform: none;
+						-webkit-transform: none;
 					}
 
 					&.expanded-to-left {
@@ -65,6 +67,7 @@
 							left: auto;
 							right: 0;
 							transform: none;
+							-webkit-transform: none;
 						}
 					}
 				}
@@ -103,6 +106,7 @@
 						right: 0;
 						left: auto;
 						transform: translateX(100%);
+						-webkit-transform: translateX(100%);
 						z-index: 1000;
 						float: left;
 						padding: 0;
@@ -175,8 +179,11 @@
 	.smart-dropdown {
 		> a {
 			display: flex;
+			display: -webkit-flex;
 			align-items: baseline;
+			-webkit-align-items: baseline;
 			justify-content: space-between;
+			-webkit-justify-content: space-between;
 
 			.navbar-toggle {
 				display: inline-block;

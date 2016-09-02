@@ -5,8 +5,11 @@
 	.block ul.footer-nav {
 
 		display: flex;
+		display: -webkit-flex;
 		flex-direction: row;
+		-webkit-flex-direction: row;
 		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
 		margin: 0;
 		padding: 0;
 
@@ -51,8 +54,10 @@
 	&-logo {
 		&_wrapper {
 			display: flex;
+			display: -webkit-flex;
 			.content {
 				display: flex;
+				display: -webkit-flex;
 			}
 			@media (max-width: $screen-xs-max) {
 				order: 1;
@@ -109,7 +114,9 @@
 		@media (max-width: $screen-xs-max) {
 			padding: 50px 0;
 			display: flex;
+			display: -webkit-flex;
 			flex-direction: column;
+			-webkit-flex-direction: column;
 
 			.region {
 				width: 100%;
@@ -146,7 +153,9 @@
 
 		@media (max-width: $screen-xs-max) {
 			display: flex;
+			display: -webkit-flex;
 			flex-direction: column;
+			-webkit-flex-direction: column;
 
 			&_address,
 			&_name,

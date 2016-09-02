@@ -9,6 +9,7 @@
 		&:after {
 			bottom: -40px;
 			left: 50%;
+			-webkit-transform: translateX(-50%);
 			transform: translateX(-50%);
 		}
 	}
@@ -32,7 +33,9 @@
 
 	> .view-content {
 		display: flex;
+		display: -webkit-flex;
 		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
 
 		&:before,
 		&:after {
@@ -160,6 +163,7 @@
 		height: 0;
 		bottom: 0;
 		left: 50%;
+		-webkit-transform: translateX(-50%) translateY(100%);
 		transform: translateX(-50%) translateY(100%);
 	}
 	&:after {
@@ -182,7 +186,9 @@
 
 	.content {
 		display: flex;
+		display: -webkit-flex;
 		align-items: baseline;
+		-webkit-align-items: baseline;
 	}
 
 	p {

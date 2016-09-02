@@ -2,12 +2,15 @@
 	position: absolute;
 	z-index: 100;
 	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
 	margin-left: 50%;
 	top: 30px;
 
 	&-actions {
+		display: -webkit-flex;
 		display: flex;
 		justify-content: flex-end;
+		-webkit-justify-content: flex-end;
 		align-items: center;
 
 		.lang-block {

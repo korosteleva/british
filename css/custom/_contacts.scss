@@ -21,6 +21,7 @@
 		bottom: -26px;
 		left: 50%;
 		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
 	}
 
 	a {
@@ -69,6 +70,7 @@
 			border-left: 50px solid #ffffff;
 			border-bottom: 150px solid transparent;
 			transform: translateX(100%);
+			-webkit-transform: translateX(100%);
 		}
 
 		&-element {
@@ -93,6 +95,7 @@
 					left: -8px;
 					top: -1px;
 					transform: translateX(-100%);
+					-webkit-transform: translateX(-100%);
 				}
 
 				// phone

@@ -7,6 +7,7 @@
 		margin: 0;
 		z-index: 100;
 		transform: none;
+		-webkit-transform: none;
 		background: rgba(0, 0, 0, .5);
 		border: none;
 
@@ -84,6 +85,7 @@
 					top: 50%;
 					left: 50%;
 					transform: translate(-50%, -50%);
+					-webkit-transform: translate(-50%, -50%);
 				}
 			}
 
